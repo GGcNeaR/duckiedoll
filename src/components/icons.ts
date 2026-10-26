@@ -9,9 +9,8 @@ export const icons = {
   discord:
     '<path d="M7 5c2-1 3-1 5-1s3 0 5 1c2 3 3 7 3 11-1.5 1.5-3.5 2.5-5 3l-1-2M7 5c-2 3-3 7-3 11 1.5 1.5 3.5 2.5 5 3l1-2M8 15c2.5 1 5.5 1 8 0"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/>',
   tiktok: '<path d="M14 3v11a4 4 0 1 1-4-4M14 3c.5 2.5 2.5 4.5 5 5"/>',
-  gift: '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1.5S12 8 12 8zM12 8c2-4 6-4 6-1.5S12 8 12 8z"/>',
-  piggy:
-    '<path d="M19 8c-1-2-3.5-3-7-3C7 5 4 7.5 4 11c0 2 1 3.5 2 4.5V19h3v-2h4v2h3v-3c1.5-.8 2.5-2 3-3h2V9h-2zM15 10h.01M2 9c.5 1 1.5 1.5 2 1.5"/>',
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',
+  patreon: '<circle cx="14.5" cy="9.5" r="6.5"/><path d="M4 3v18"/>',
   image: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',

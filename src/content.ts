@@ -86,11 +86,10 @@ export const clipThumbnailPlaceholder = '[CLIP THUMBNAIL]'
 export const community: { title: string; blurb: string; cta: string; href: string; icon: IconName }[] = [
   // [TODO] Discord invite link
   { title: 'Discord', blurb: 'Chat between streams', cta: 'join', href: '#', icon: 'discord' },
+  { title: 'Instagram', blurb: 'Selfies, doodles and cozy bits', cta: 'peek', href: 'https://www.instagram.com/duckiedoll', icon: 'instagram' },
   // [TODO] TikTok profile link
   { title: 'TikTok', blurb: 'Bite-sized side quests', cta: 'follow', href: '#', icon: 'tiktok' },
-  { title: 'Wishlist', blurb: 'Craft supplies and cozy things', cta: 'peek', href: 'https://throne.com/duckiedoll', icon: 'gift' },
-  // [TODO] tip / support link
-  { title: 'Support', blurb: 'Only if you have the funds — thank u ^.^', cta: 'tip', href: '#', icon: 'piggy' },
+  { title: 'Patreon', blurb: 'Extra cozy perks and behind-the-scenes — thank u ^.^', cta: 'join', href: 'https://www.patreon.com/cw/duckiedoll21', icon: 'patreon' },
 ]
 
 export const footer = {
