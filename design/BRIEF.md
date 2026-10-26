@@ -53,33 +53,51 @@ Keep all bracketed placeholders (`[CLIP TITLE]` etc.) as config in one
 
 ## StreamPlayer: live data, no fixed schedule
 
-Backend service, endpoint `GET /api/streams` returns:
+Twitch's API needs a client secret, which must never ship in browser code, so
+the data is split in two:
 
-```
-{ live: {title, startedAt, viewerCount} | null,
-  recent: [{title, startedAt, duration, url}],   // last 4
-  usualTime: "afternoons" | "evenings" | ... }
-```
+**1. Past broadcasts: static JSON refreshed by a GitHub Action**
+- `scripts/fetch-streams.mjs` (Node, no deps beyond fetch) gets an app token
+  (client credentials), then calls `/helix/users?login=duckiedoll` and
+  `/helix/videos?user_id=…&type=archive&first=20`.
+- It merges results into `public/data/streams.json`, keyed by video id, and
+  **never deletes old entries**, so the history survives Twitch VOD expiry.
+  Shape: `{ updatedAt, streams: [{id, title, startedAt, duration, url}] }`
+  sorted newest first.
+- `.github/workflows/streams.yml`: cron every 30 min + manual dispatch. Runs the
+  script with `TWITCH_CLIENT_ID` / `TWITCH_CLIENT_SECRET` from repo secrets,
+  commits the JSON only if it changed, then the normal deploy workflow publishes.
+- The site fetches `/data/streams.json` at runtime.
 
-- Twitch Helix with an app access token (client credentials). Use
-  `/helix/users?login=duckiedoll` for the id, `/helix/streams` for live status,
-  `/helix/videos?type=archive` for past broadcasts.
-- Cache responses ~3 min. Persist every broadcast seen (SQLite is fine), because
-  Twitch deletes VODs after a while.
-- usualTime = most common start-time bucket over stored streams, in the
-  visitor's timezone on the client.
-- `TWITCH_CLIENT_ID` / `TWITCH_CLIENT_SECRET` from env, never shipped to the client.
+**2. Live status: in the browser**
+- Load the official Twitch embed script (`https://embed.twitch.tv/embed/v1.js`)
+  in a hidden or small player for channel `duckiedoll` and listen for
+  `Twitch.Embed.VIDEO_PLAY` / `Twitch.Player.ONLINE` / `OFFLINE`. `parent` must
+  list the production domain and `localhost`.
+- When online: show the LIVE state and optionally reveal the embedded player.
 
-UI: LIVE state with a pink dot + title; offline shows "last on air X ago",
-title, duration, "replay it →"; list of recent streams with ellipsized titles.
-Graceful fallback when the API fails.
+UI: LIVE state with a pink dot + current title; offline shows "last on air X ago",
+title, duration, "replay it →" (newest JSON entry); list of the 4 most recent
+streams with ellipsized titles; "Usually live in the [afternoons]" computed on
+the client from the stored start times in the visitor's timezone.
+Graceful fallback when the JSON or embed fails (hide the section's dynamic parts,
+keep the "watch on Twitch" link).
 
 ## Done when
 
 - Matches the design at 1440px and 390px; no horizontal scroll at 360px.
 - Keyboard and screen-reader friendly (real buttons/links, 4.5:1 text contrast).
-- Lighthouse a11y ≥ 95; README explains env vars and Render deploy.
+- Lighthouse a11y ≥ 95; `npm run build` outputs a fully static `dist/`.
+- README explains the repo secrets, the data workflow, and static hosting deploy.
+- No secrets anywhere in `src/` or the built bundle.
 
 Start by scaffolding the project and the design tokens, then build the
-components, then the page, then the Twitch service. Show the plan before
-writing code.
+components, then the page, then the streams data script + workflow and the live
+embed. Show the plan before writing code.
+
+## Motion
+
+Implement the animations in `design/MOTION.md` (demo: `design/Motion.dc.html`)
+after the static page works. Build the motion as one layer on top of the page
+(`motion.css`, a `v-reveal` directive, small composables) so it can be switched
+off globally.
