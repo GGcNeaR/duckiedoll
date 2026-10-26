@@ -19,6 +19,16 @@ export interface RecentStream {
   url: string
 }
 
+export interface ClipInfo {
+  title: string
+  /** clip page on Twitch */
+  url: string
+  thumbnailUrl: string
+  viewCount: number
+  /** ISO 8601 */
+  createdAt: string
+}
+
 export interface StreamsResponse {
   live: LiveStream | null
   /** last 4 finished broadcasts, newest first */
@@ -27,6 +37,8 @@ export interface StreamsResponse {
   usualTime: TimeBucket | null
   /** ISO starts of stored broadcasts (newest first), for local-timezone bucketing */
   startTimes: string[]
+  /** newest clips (up to 3), used when none are set in src/content.ts; absent in older payloads */
+  clips?: ClipInfo[]
   /** ISO time the data was refreshed from Twitch */
   updatedAt: string
 }

@@ -24,6 +24,15 @@ export interface HelixVideo {
   duration: string
 }
 
+export interface HelixClip {
+  id: string
+  url: string
+  title: string
+  view_count: number
+  created_at: string
+  thumbnail_url: string
+}
+
 /** "3h18m10s" / "45m2s" / "12s" -> seconds */
 export function parseTwitchDuration(s: string): number {
   const m = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/.exec(s.trim())
@@ -66,6 +75,14 @@ export function createTwitchClient(cfg: TwitchConfig) {
     async getLiveStream(userId: string): Promise<HelixStream | null> {
       const [stream] = await helix<HelixStream>(`/streams?user_id=${userId}&type=live`)
       return stream ?? null
+    },
+    /**
+     * Up to 100 clips (Helix sorts them by views). With a range, only clips created inside it;
+     * Helix needs both ends, otherwise it assumes one week after `from`.
+     */
+    getClips(userId: string, range?: { from: string; to: string }): Promise<HelixClip[]> {
+      const window = range ? `&started_at=${range.from}&ended_at=${range.to}` : ''
+      return helix<HelixClip>(`/clips?broadcaster_id=${userId}&first=100${window}`)
     },
     /** Up to 100 most recent past broadcasts (the most Helix returns per page). */
     getArchives(userId: string): Promise<HelixVideo[]> {

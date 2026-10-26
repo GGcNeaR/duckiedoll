@@ -28,7 +28,9 @@ scripts/streams/        Twitch refresh script (run by the Action)
 Open `src/content.ts`. Anything still in `[BRACKETS]` or with a `[TODO]` comment needs real content:
 
 - **Avatar**: drop a transparent PNG in `public/` (e.g. `public/avatar.png`) and set `avatar.src = 'avatar.png'`.
-- **Clips**: per clip, set `title`, `views`, `date`, `href` (Twitch clip URL) and optionally `thumbnail` (image in `public/` or a URL).
+- **Clips**: leave them as they are to show her **3 newest Twitch clips automatically**. To hand-pick
+  instead, set `title`, `views`, `date`, `href` (Twitch clip URL) and optionally `thumbnail` (image in
+  `public/` or a URL). As soon as any clip has an `href`, only the hand-picked ones are shown.
 - **Community links**: Discord, TikTok and Support are `#` until you paste the real links.
 
 Commit and push to `main`, and the site redeploys in about a minute.
@@ -82,10 +84,13 @@ npm run streams:refresh  # writes public/streams.json (history goes to .stream-d
 ## How stream data works
 
 - `streams.json` looks like
-  `{ live: {title, startedAt, viewerCount} | null, recent: [{title, startedAt, duration, url}] (last 4), usualTime, startTimes, updatedAt }`.
+  `{ live: {title, startedAt, viewerCount} | null, recent: [{title, startedAt, duration, url}] (last 4), usualTime, startTimes, clips: [{title, url, thumbnailUrl, viewCount, createdAt}], updatedAt }`.
   `duration` is in seconds.
 - `scripts/streams/refresh.ts` uses a Twitch **app access token** (client credentials) and calls
   `/helix/users` (id), `/helix/streams` (live status) and `/helix/videos?type=archive` (past broadcasts).
+- **Clips**: the script also fetches her 3 newest clips via `/helix/clips` (looking at the last
+  90 days first, then all-time). They're used whenever no clips are set in `src/content.ts`.
+  View-count changes alone don't trigger a redeploy. If the clips call fails, the last good clips are kept.
 - **Every broadcast seen is kept forever** in `history.json` on the `stream-data` branch, from
   VODs and from the live stream itself. Twitch deletes VODs after a while; when that happens the
   stream stays in the history and its "replay" link falls back to the channel's videos page.

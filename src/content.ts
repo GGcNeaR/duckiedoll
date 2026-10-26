@@ -74,6 +74,8 @@ export interface Clip {
   tone: Tone
 }
 
+// Leave every `href` empty to show her newest Twitch clips automatically (fetched by the
+// GitHub Action). As soon as any clip here has an `href`, only the clips set here are shown.
 export const clips: Clip[] = [
   { title: '[CLIP TITLE]', views: '[VIEWS]', date: '[DATE]', thumbnail: '', href: '', tone: 'lilac' },
   { title: '[CLIP TITLE]', views: '[VIEWS]', date: '[DATE]', thumbnail: '', href: '', tone: 'pink' },

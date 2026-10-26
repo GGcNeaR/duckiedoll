@@ -120,10 +120,7 @@ const paused = computed(() => !inView.value || !pageVisible.value)
         <a :href="twitch.videos" v-bind="linkAttrs(twitch.videos)" class="focus-light text-pink hover:text-paper">see past broadcasts on Twitch</a>.
       </p>
 
-      <p class="mt-auto mb-0 text-sm text-lavender">
-        <template v-if="usual">Usually live in the {{ usual }} · updates automatically from Twitch</template>
-        <template v-else>Updates automatically from Twitch</template>
-      </p>
+      <p v-if="usual" class="mt-auto mb-0 text-sm text-lavender">Usually live in the {{ usual }}</p>
     </div>
   </RetroWindow>
 </template>

@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import ClipCard from '../components/ClipCard.vue'
 import { clipThumbnailPlaceholder, clips, twitch } from '../content'
 import { linkAttrs } from '../lib/links'
+import { chooseClips } from '../lib/clips'
+import { useStreams } from '../composables/useStreams'
+
+// clips from content.ts win; with none set, the newest Twitch clips from streams.json show
+const { data } = useStreams()
+const shown = computed(() => chooseClips(clips, data.value?.clips))
 </script>
 
 <template>
@@ -12,12 +19,12 @@ import { linkAttrs } from '../lib/links'
     </div>
     <div class="grid grid-cols-[repeat(auto-fill,minmax(min(320px,100%),1fr))] gap-7">
       <ClipCard
-        v-for="(clip, i) in clips"
-        :key="i"
+        v-for="(clip, i) in shown"
+        :key="clip.href || i"
         v-reveal="{ delay: i * 80 }"
         :filename="`clip_${String(i + 1).padStart(2, '0')}.mp4`"
         :title="clip.title"
-        :meta="`${clip.views} · ${clip.date}`"
+        :meta="clip.meta"
         :thumbnail="clip.thumbnail"
         :thumbnail-placeholder="clipThumbnailPlaceholder"
         :href="clip.href"

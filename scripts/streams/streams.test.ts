@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { parseTwitchDuration, type HelixStream, type HelixVideo } from './twitch'
-import { buildResponse, markDeletedVods, mergeArchives, recordLive, responseChanged } from './history'
+import { buildResponse, markDeletedVods, mergeArchives, pickRecentClips, recordLive, responseChanged } from './history'
+import type { HelixClip } from './twitch'
 
 const vod = (n: number, created_at: string, duration = '1h0m0s'): HelixVideo => ({
   id: `v${n}`,
@@ -74,5 +75,33 @@ describe('history', () => {
     expect(responseChanged(a, { ...a, updatedAt: '2026-10-26T12:10:00Z' })).toBe(false)
     expect(responseChanged(a, buildResponse(h.slice(1), null, 'duckiedoll', NOW))).toBe(true)
     expect(responseChanged(null, a)).toBe(true)
+  })
+
+  it('ignores clip view counts but not new clips', () => {
+    const h = mergeArchives([], videos, NOW)
+    const clip = { title: 'c', url: 'u', thumbnailUrl: 't', viewCount: 5, createdAt: NOW }
+    const a = buildResponse(h, null, 'duckiedoll', NOW, [clip])
+    expect(responseChanged(a, buildResponse(h, null, 'duckiedoll', NOW, [{ ...clip, viewCount: 500 }]))).toBe(false)
+    expect(responseChanged(a, buildResponse(h, null, 'duckiedoll', NOW, [{ ...clip, title: 'new' }]))).toBe(true)
+    // payloads from before clips existed
+    const { clips: _c, ...old } = buildResponse(h, null, 'duckiedoll', NOW)
+    expect(responseChanged(old, buildResponse(h, null, 'duckiedoll', NOW))).toBe(false)
+  })
+})
+
+describe('pickRecentClips', () => {
+  const clip = (id: string, created_at: string, view_count = 1): HelixClip => ({
+    id, url: `https://clips.twitch.tv/${id}`, title: `clip ${id}`, view_count, created_at, thumbnail_url: `https://img/${id}.jpg`,
+  })
+  it('returns the 3 newest, de-duplicated, mapped to the site shape', () => {
+    const picked = pickRecentClips([
+      clip('a', '2026-10-01T00:00:00Z', 900),
+      clip('b', '2026-10-20T00:00:00Z'),
+      clip('c', '2026-09-01T00:00:00Z'),
+      clip('b', '2026-10-20T00:00:00Z'),
+      clip('d', '2026-10-25T00:00:00Z'),
+    ])
+    expect(picked.map((c) => c.title)).toEqual(['clip d', 'clip b', 'clip a'])
+    expect(picked[2]).toEqual({ title: 'clip a', url: 'https://clips.twitch.tv/a', thumbnailUrl: 'https://img/a.jpg', viewCount: 900, createdAt: '2026-10-01T00:00:00Z' })
   })
 })

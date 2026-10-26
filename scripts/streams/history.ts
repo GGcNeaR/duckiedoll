@@ -1,8 +1,8 @@
 // Broadcast history kept in the repo (stream-data branch), because Twitch deletes VODs after a while.
 // Pure functions so the merge rules are easy to test.
 
-import { usualBucket, type StreamsResponse } from '../../shared/streams'
-import { parseTwitchDuration, type HelixStream, type HelixVideo } from './twitch'
+import { usualBucket, type ClipInfo, type StreamsResponse } from '../../shared/streams'
+import { parseTwitchDuration, type HelixClip, type HelixStream, type HelixVideo } from './twitch'
 
 export interface Broadcast {
   streamId: string
@@ -69,11 +69,21 @@ function sortHistory(history: Broadcast[]): Broadcast[] {
   return history.sort((a, b) => (a.startedAt < b.startedAt ? 1 : a.startedAt > b.startedAt ? -1 : 0))
 }
 
+/** Newest clips first, de-duplicated (the recent and all-time lists can overlap). */
+export function pickRecentClips(clips: HelixClip[], count = 3): ClipInfo[] {
+  const unique = [...new Map(clips.map((c) => [c.id, c])).values()]
+  return unique
+    .sort((a, b) => (a.created_at < b.created_at ? 1 : a.created_at > b.created_at ? -1 : 0))
+    .slice(0, count)
+    .map((c) => ({ title: c.title, url: c.url, thumbnailUrl: c.thumbnail_url, viewCount: c.view_count, createdAt: c.created_at }))
+}
+
 export function buildResponse(
   history: Broadcast[],
   live: HelixStream | null,
   login: string,
   updatedAt: string,
+  clips: ClipInfo[] = [],
 ): StreamsResponse {
   const videosUrl = `https://twitch.tv/${login}/videos`
   const startTimes = history.slice(0, 60).map((b) => b.startedAt)
@@ -85,13 +95,18 @@ export function buildResponse(
       .map((b) => ({ title: b.title, startedAt: b.startedAt, duration: b.duration, url: b.url ?? videosUrl })),
     usualTime: usualBucket(startTimes, (d) => d.getUTCHours()),
     startTimes,
+    clips,
     updatedAt,
   }
 }
 
-/** True when what visitors would see differs (ignores the refresh timestamp). */
+/**
+ * True when what visitors would see differs. Ignores the refresh timestamp and clip view
+ * counts (they tick up constantly; they're refreshed whenever anything else changes).
+ */
 export function responseChanged(prev: StreamsResponse | null, next: StreamsResponse): boolean {
   if (!prev) return true
-  const strip = ({ updatedAt: _ignored, ...rest }: StreamsResponse) => JSON.stringify(rest)
+  const strip = ({ updatedAt: _ignored, clips, ...rest }: StreamsResponse) =>
+    JSON.stringify({ ...rest, clips: (clips ?? []).map(({ viewCount: _views, ...c }) => c) })
   return strip(prev) !== strip(next)
 }
