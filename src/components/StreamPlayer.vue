@@ -41,6 +41,7 @@ const paused = computed(() => !inView.value || !pageVisible.value)
     title-color="dark"
     aria-labelledby="schedule-title"
     :aria-busy="status === 'loading'"
+    :class="{ 'cursor-loading': status === 'loading' }"
   >
     <div ref="body" class="flex grow flex-col gap-[22px] p-7" :class="{ 'is-paused': paused }">
       <div

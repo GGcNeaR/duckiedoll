@@ -60,18 +60,18 @@
 /* 1. windows open on scroll (v-reveal). The hidden start state only exists when
       motion is allowed, so without JS or with reduced motion content is visible. */
 @media (prefers-reduced-motion: no-preference) {
-  .js-motion [data-reveal]:not(.is-revealed) {
+  .js-motion [data-reveal="wait"] {
     opacity: 0;
     transform: scale(0.94) translateY(12px);
   }
 }
-.is-revealed { animation: winOpen var(--dur-enter) var(--ease-pop) both; }
-/* once open, drop the animation so hover/press transforms work again */
-.is-revealed.reveal-done { animation: none; }
+[data-reveal="open"] { animation: winOpen var(--dur-enter) var(--ease-pop) both; }
+/* once "done" the animation is dropped, so hover/press transforms work again */
 
 /* 2. hero boot bar: chained after the welcome window opens */
 .boot-fill { display: block; width: 100%; height: 100%; }
-.is-revealed .boot-fill.boot-run { animation: boot 1.6s steps(16, end) var(--dur-enter) both; }
+[data-reveal="open"] .boot-fill.boot-run,
+[data-reveal="done"] .boot-fill.boot-run { animation: boot 1.6s steps(16, end) var(--dur-enter) both; }
 .boot-ready { animation: fadeIn 250ms ease both; }
 
 /* 3. stream player */
@@ -134,7 +134,6 @@
 /* 4. offset-shadow buttons: hover lifts, press sinks into the shadow.
       Set --press-shadow for a non-ink shadow and --press-ring for the focus ring. */
 @utility press {
-  cursor: pointer;
   transition: transform var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
   @media (hover: hover) {
     &:hover {

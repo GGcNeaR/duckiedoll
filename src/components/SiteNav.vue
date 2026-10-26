@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
       <button
         ref="menuButton"
         type="button"
-        class="burger focus-light hidden size-12 cursor-pointer flex-col items-center justify-center gap-[4.5px] rounded-[10px] border-2 border-paper bg-lavender p-0 text-ink max-[640px]:flex"
+        class="burger focus-light hidden size-12 flex-col items-center justify-center gap-[4.5px] rounded-[10px] border-2 border-paper bg-lavender p-0 text-ink max-[640px]:flex"
         :class="{ 'is-open': open }"
         :aria-label="open ? 'Close menu' : 'Open menu'"
         :aria-expanded="open"

@@ -15,8 +15,8 @@ export const twitch = {
 export const nav = [
   { label: 'about', href: '#about' },
   { label: 'streams', href: '#schedule' },
-  { label: 'clips', href: '#clips' },
   { label: 'side quests', href: '#quests' },
+  { label: 'clips', href: '#clips' },
   { label: 'community', href: '#community' },
 ]
 

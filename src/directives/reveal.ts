@@ -3,6 +3,10 @@ import { motionAllowed } from '../composables/useMotion'
 
 // v-reveal: retro windows "open" (scale + fade) the first time they scroll into view.
 // Usage: v-reveal or v-reveal="{ delay: i * 80 }" to stagger siblings in a row.
+//
+// State lives in data-reveal ("wait" → "open" → "done"), not in classes: Vue rewrites an
+// element's whole class list whenever a :class binding on it changes, which would wipe
+// directive-added classes and hide the window again.
 
 export interface RevealOptions {
   /** ms */
@@ -14,10 +18,10 @@ let io: IntersectionObserver | null = null
 function open(el: HTMLElement) {
   el.addEventListener('animationend', function done(e: AnimationEvent) {
     if (e.target !== el || e.animationName !== 'winOpen') return
-    el.classList.add('reveal-done')
+    el.dataset.reveal = 'done'
     el.removeEventListener('animationend', done)
   })
-  el.classList.add('is-revealed')
+  el.dataset.reveal = 'open'
 }
 
 function observer(): IntersectionObserver {
@@ -36,12 +40,12 @@ function observer(): IntersectionObserver {
 
 export const vReveal: Directive<HTMLElement, RevealOptions | undefined> = {
   beforeMount(el, { value }) {
-    el.dataset.reveal = ''
+    el.dataset.reveal = 'wait'
     if (value?.delay) el.style.animationDelay = `${value.delay}ms`
   },
   mounted(el) {
     if (!motionAllowed() || !('IntersectionObserver' in window)) {
-      el.classList.add('is-revealed', 'reveal-done')
+      el.dataset.reveal = 'done'
       return
     }
     observer().observe(el)

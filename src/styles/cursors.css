@@ -1,0 +1,33 @@
+/* Pixel-duck cursors. The art lives as text grids in scripts/cursors/build-cursors.ts;
+ * rebuild the SVGs with `npm run cursors:build`.
+ *
+ * "1 15" is the hotspot: the tip of the beak, where clicks land.
+ * The keyword after each image is the fallback if the image can't be used.
+ * Mouse/trackpad only; touch screens have no cursor.
+ */
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: url("../assets/cursors/duck.svg") 1 15, auto;
+  }
+  a[href],
+  button:not(:disabled),
+  summary,
+  label[for] {
+    cursor: url("../assets/cursors/duck-point.svg") 1 15, pointer;
+  }
+  a[href]:active,
+  button:not(:disabled):active {
+    cursor: url("../assets/cursors/duck-quack.svg") 1 15, pointer;
+  }
+  /* waiting on data (the stream player while it tunes in) */
+  .cursor-loading,
+  .cursor-loading * {
+    cursor: url("../assets/cursors/duck-sleep.svg") 1 15, progress;
+  }
+  /* text fields keep the normal I-beam so editing still feels right */
+  input,
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+}

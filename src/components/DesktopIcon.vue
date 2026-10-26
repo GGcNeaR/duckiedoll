@@ -19,7 +19,7 @@ function onClick() {
   <!-- hover/focus/open shows the "selected desktop icon" look: lavender tile + dashed outline -->
   <button
     type="button"
-    class="group flex w-full cursor-pointer flex-col items-center gap-3 rounded-window border-2 border-ink bg-white px-4 py-[22px] text-center font-sans text-ink focus-visible:outline-none"
+    class="group flex w-full flex-col items-center gap-3 rounded-window border-2 border-ink bg-white px-4 py-[22px] text-center font-sans text-ink focus-visible:outline-none"
     :aria-expanded="expanded"
     :aria-controls="controls"
     @click="onClick"
