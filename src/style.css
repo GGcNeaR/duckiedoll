@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Lavender Desktop '01 — design tokens */
+@theme {
+  /* core palette */
+  --color-bg: #efe7fa;
+  --color-dot: #d6c6f0;
+  --color-lavender: #b9a3e3;
+  --color-violet: #6b4fa0;
+  --color-ink: #2a1f3d;
+  --color-muted: #6e5a92;
+  --color-pink: #f4a6c8;
+  --color-berry: #c2477f;
+  --color-butter: #fff6c9;
+  --color-night: #121014;
+
+  /* secondaries used in the design file */
+  --color-link: #5b3e96;
+  --color-body: #3d2f57;
+  --color-lilac-100: #e4d8f6;
+  --color-pink-100: #fbe1ec;
+  --color-rose: #a23466;
+  --color-grape: #8b6cc9;
+  --color-plum-600: #4a3870;
+  --color-plum-700: #3a2c58;
+  --color-plum-900: #120d1c;
+  --color-paper: #f3edfb;
+  --color-haze: #c9b8e8;
+  --color-glow: #d9c9f7;
+  --color-offline: #8b7aa8;
+
+  --font-pixel: "Pixelify Sans", ui-monospace, monospace;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  --shadow-window: 8px 8px 0 var(--color-ink);
+  --shadow-window-glow: 8px 8px 0 var(--color-grape);
+  --shadow-card: 6px 6px 0 var(--color-ink);
+  --shadow-btn: 4px 4px 0 var(--color-ink);
+  --shadow-btn-lift: 6px 6px 0 var(--color-ink);
+
+  --radius-window: 12px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  a { color: var(--color-link); }
+  a:hover { color: var(--color-ink); }
+  :focus-visible {
+    outline: 3px solid var(--color-violet);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* 22px dot-grid desktop */
+@utility desk {
+  background-color: var(--color-bg);
+  background-image: radial-gradient(var(--color-dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* chunky offset-shadow lift used by AppButton and the nav pill */
+@utility lift {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  &:hover, &:focus-visible {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-btn-lift);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover, &:focus-visible { transform: none; }
+  }
+}
+
+/* focus ring that stays visible on dark panels */
+@utility focus-light {
+  &:focus-visible { outline-color: var(--color-pink); }
+}

@@ -1,0 +1,108 @@
+name: Site
+
+# One workflow does everything, all on GitHub's free tier (public repo):
+#  - every ~10 min: fetch Twitch data, save broadcast history to the `stream-data` branch,
+#    and redeploy GitHub Pages only if what visitors see changed
+#  - on push to main (or manual run): test, build and deploy the site
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write # push history to the stream-data branch
+  actions: write # keep the schedule from being auto-disabled after 60 idle days
+  pages: write
+  id-token: write
+
+# queue runs (never cancel one mid-push of the history)
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+env:
+  TWITCH_LOGIN: duckiedoll
+  HISTORY_DIR: .stream-data
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.decide.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check out broadcast history (stream-data branch)
+        run: |
+          if git fetch --depth=1 origin stream-data; then
+            git worktree add "$HISTORY_DIR" FETCH_HEAD
+            git -C "$HISTORY_DIR" switch -c stream-data
+          else
+            git worktree add --orphan -b stream-data "$HISTORY_DIR"
+          fi
+          # start from the last published data in case Twitch is unreachable
+          if [ -f "$HISTORY_DIR/streams.json" ]; then cp "$HISTORY_DIR/streams.json" public/streams.json; fi
+
+      - name: Refresh from Twitch
+        id: refresh
+        # a Twitch outage must not block deploying code changes
+        continue-on-error: ${{ github.event_name != 'schedule' }}
+        run: npm run streams:refresh
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+
+      - name: Save history
+        working-directory: ${{ env.HISTORY_DIR }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "no history changes"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Update stream data"
+          git push -q origin stream-data
+
+      - name: Decide whether to deploy
+        id: decide
+        run: echo "deploy=${{ github.event_name != 'schedule' || steps.refresh.outputs.changed == 'true' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Keep the schedule alive
+        if: github.event_name == 'schedule'
+        # GitHub disables scheduled workflows after 60 days without repo activity;
+        # re-enabling resets that timer.
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/site.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - if: steps.decide.outputs.deploy == 'true'
+        run: npm test
+
+      - if: steps.decide.outputs.deploy == 'true'
+        run: npm run build
+        env:
+          # "/" for a custom domain or a <user>.github.io repo, otherwise "/<repo>/"
+          VITE_BASE: ${{ vars.VITE_BASE || format('/{0}/', github.event.repository.name) }}
+
+      - if: steps.decide.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
