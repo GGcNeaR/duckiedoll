@@ -9,6 +9,7 @@ import { about } from '../content'
   <section class="flex flex-wrap items-stretch gap-10" aria-label="About and streams">
     <RetroWindow
       id="about"
+      v-reveal
       as="article"
       title="about_me.txt"
       aria-labelledby="about-title"
@@ -34,6 +35,6 @@ import { about } from '../content'
       </div>
     </RetroWindow>
 
-    <StreamPlayer id="schedule" class="flex-[1_1_400px]" />
+    <StreamPlayer id="schedule" v-reveal="{ delay: 80 }" class="flex-[1_1_400px]" />
   </section>
 </template>

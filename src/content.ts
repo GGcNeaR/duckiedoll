@@ -27,7 +27,7 @@ export const hero = {
     'Cozy Twitch streams from Bulgaria — anime talk, drawing, knitting, baking and a little bit of side quests. A family-friendly corner of the internet where chat is always kind.',
   primaryCta: { label: 'Watch on Twitch', href: twitch.channel },
   secondaryCta: { label: 'Join the flock', href: '#community' },
-  loading: { label: 'loading good vibes...', percent: 75 },
+  loading: { label: 'loading good vibes...', readyLabel: 'ready ✓' },
 }
 
 export const avatar = {
@@ -53,13 +53,14 @@ export const about = {
   funFacts: ['Shorter than Ariana Grande.', 'Can guess the celebrity just by their mouth.'],
 }
 
-export const quests: { label: string; icon: IconName; tone: Tone }[] = [
-  { label: 'anime.exe', icon: 'tv', tone: 'lilac' },
-  { label: 'books.lnk', icon: 'book', tone: 'pink' },
-  { label: 'drawing.bmp', icon: 'pen', tone: 'lilac' },
-  { label: 'knitting.zip', icon: 'yarn', tone: 'pink' },
-  { label: 'baking.dll', icon: 'cake', tone: 'lilac' },
-  { label: 'yapping.wav', icon: 'chat', tone: 'pink' },
+/** `note` is shown in a little "<hobby>.txt" window when the icon is clicked */
+export const quests: { label: string; icon: IconName; tone: Tone; note: string }[] = [
+  { label: 'anime.exe', icon: 'tv', tone: 'lilac', note: 'Currently watching: [ANIME TITLE]' },
+  { label: 'books.lnk', icon: 'book', tone: 'pink', note: 'On the nightstand: [BOOK TITLE]' },
+  { label: 'drawing.bmp', icon: 'pen', tone: 'lilac', note: 'Latest doodle: [LINK TO ART]' },
+  { label: 'knitting.zip', icon: 'yarn', tone: 'pink', note: 'On the needles: [PROJECT]' },
+  { label: 'baking.dll', icon: 'cake', tone: 'lilac', note: 'Last bake: [RECIPE]' },
+  { label: 'yapping.wav', icon: 'chat', tone: 'pink', note: 'Every stream. No exceptions.' },
 ]
 
 export interface Clip {

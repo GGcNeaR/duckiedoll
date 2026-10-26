@@ -1,40 +1,13 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import RetroWindow from './RetroWindow.vue'
-import type { StreamsResponse } from '../../shared/streams'
-import {
-  fetchStreams,
-  formatDuration,
-  formatShortDuration,
-  localUsualTime,
-  readCached,
-  timeAgo,
-  weekday,
-} from '../lib/streams'
+import { formatDuration, formatShortDuration, localUsualTime, timeAgo, weekday } from '../lib/streams'
 import { twitch } from '../content'
 import { linkAttrs } from '../lib/links'
+import { useStreams } from '../composables/useStreams'
+import { restartAnimation, useInViewport, usePageVisible } from '../composables/useMotion'
 
-const POLL_MS = 3 * 60 * 1000
-// streams.json is generated and deployed with the site by the GitHub Action
-const apiUrl = import.meta.env.VITE_STREAMS_API_URL || `${import.meta.env.BASE_URL}streams.json`
-
-const data = ref<StreamsResponse | null>(null)
-const status = ref<'loading' | 'ok' | 'stale' | 'error'>('loading')
-const now = ref(new Date())
-let lastFetch = 0
-
-async function load() {
-  lastFetch = Date.now()
-  try {
-    data.value = await fetchStreams(apiUrl)
-    status.value = 'ok'
-  } catch {
-    // Keep showing what we had; otherwise fall back to the last payload this browser saw.
-    if (!data.value) data.value = readCached()
-    status.value = data.value ? 'stale' : 'error'
-  }
-  now.value = new Date()
-}
+const { data, status, now } = useStreams()
 
 const live = computed(() => data.value?.live ?? null)
 const last = computed(() => data.value?.recent[0] ?? null)
@@ -46,24 +19,19 @@ const liveFor = computed(() =>
   live.value ? formatDuration((now.value.getTime() - new Date(live.value.startedAt).getTime()) / 1000) : '',
 )
 
-let timer: number | undefined
-function tick() {
-  now.value = new Date()
-  if (document.visibilityState === 'visible' && Date.now() - lastFetch >= POLL_MS) load()
-}
-function onVisible() {
-  if (document.visibilityState === 'visible') tick()
-}
+// LCD flicker whenever the player's state changes (not on polls that return the same state).
+// Replaying a class keeps the panel mounted, so its aria-live status keeps announcing.
+const panel = ref<HTMLElement | null>(null)
+const playerState = computed(() =>
+  status.value === 'loading' ? 'loading' : live.value ? 'live' : status.value === 'error' ? 'error' : 'offline',
+)
+watch(playerState, () => restartAnimation(panel.value, 'lcd-flicker'), { flush: 'post' })
 
-onMounted(() => {
-  load()
-  timer = window.setInterval(tick, 30_000)
-  document.addEventListener('visibilitychange', onVisible)
-})
-onBeforeUnmount(() => {
-  window.clearInterval(timer)
-  document.removeEventListener('visibilitychange', onVisible)
-})
+// pause the equalizer + pulse when nobody can see them
+const body = ref<HTMLElement | null>(null)
+const inView = useInViewport(body)
+const pageVisible = usePageVisible()
+const paused = computed(() => !inView.value || !pageVisible.value)
 </script>
 
 <template>
@@ -74,15 +42,18 @@ onBeforeUnmount(() => {
     aria-labelledby="schedule-title"
     :aria-busy="status === 'loading'"
   >
-    <div class="flex grow flex-col gap-[22px] p-7">
-      <div class="flex flex-col gap-2.5 rounded-lg border-2 border-plum-600 bg-plum-900 px-5 py-[18px]">
+    <div ref="body" class="flex grow flex-col gap-[22px] p-7" :class="{ 'is-paused': paused }">
+      <div
+        ref="panel"
+        class="lcd-flicker flex flex-col gap-2.5 rounded-lg border-2 border-plum-600 bg-plum-900 px-5 py-[18px]"
+      >
         <!-- status line -->
         <div class="flex items-center justify-between gap-3 font-pixel text-[13px] tracking-[1px] text-lavender" aria-live="polite">
           <span class="flex min-w-0 items-center gap-2">
             <span
               aria-hidden="true"
               class="size-[9px] shrink-0 rounded-full"
-              :class="live ? 'bg-pink motion-safe:animate-pulse' : 'bg-offline'"
+              :class="live ? 'live-dot bg-pink' : 'bg-offline'"
             />
             <template v-if="status === 'loading'">TUNING IN…</template>
             <template v-else-if="live">LIVE · {{ live.viewerCount.toLocaleString() }} WATCHING</template>
@@ -94,13 +65,18 @@ onBeforeUnmount(() => {
           <span v-else-if="last" class="shrink-0"><span class="sr-only">duration </span>{{ formatDuration(last.duration) }}</span>
         </div>
 
-        <!-- title -->
-        <p v-if="status === 'loading'" class="m-0 h-[30px] w-3/4 animate-pulse rounded bg-plum-700" aria-hidden="true" />
-        <p v-else class="m-0 font-pixel text-[26px] leading-[1.15] break-words text-paper">
-          <template v-if="live">{{ live.title }}</template>
-          <template v-else-if="last">{{ last.title }}</template>
-          <template v-else>catch me on Twitch — streams pop up here</template>
-        </p>
+        <!-- title + equalizer -->
+        <div class="flex items-center gap-4">
+          <p v-if="status === 'loading'" class="m-0 h-[30px] w-3/4 animate-pulse rounded bg-plum-700" aria-hidden="true" />
+          <p v-else class="m-0 min-w-0 grow font-pixel text-[26px] leading-[1.15] break-words text-paper">
+            <template v-if="live">{{ live.title }}</template>
+            <template v-else-if="last">{{ last.title }}</template>
+            <template v-else>catch me on Twitch — streams pop up here</template>
+          </p>
+          <div aria-hidden="true" class="eq ml-auto flex h-7 shrink-0 items-end gap-[3px]" :class="live ? 'on' : 'off'">
+            <span /><span /><span /><span />
+          </div>
+        </div>
 
         <div aria-hidden="true" class="h-1.5 rounded-[3px] bg-plum-700">
           <span class="block size-full rounded-[3px]" :class="live ? 'bg-pink' : 'bg-lavender'" />

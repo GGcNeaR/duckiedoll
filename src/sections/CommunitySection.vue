@@ -14,8 +14,8 @@ import { community } from '../content'
       <h2 id="community-title" class="m-0 font-pixel text-[clamp(32px,7vw,48px)]">the flock is EGG-cellent</h2>
     </div>
     <ul class="m-0 grid list-none grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-5 p-0">
-      <li v-for="c in community" :key="c.title" class="flex">
-        <CommunityCard v-bind="c" class="w-full" />
+      <li v-for="(c, i) in community" :key="c.title" class="flex">
+        <CommunityCard v-reveal="{ delay: i * 80 }" v-bind="c" class="w-full" />
       </li>
     </ul>
   </section>

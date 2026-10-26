@@ -14,6 +14,7 @@ import { linkAttrs } from '../lib/links'
       <ClipCard
         v-for="(clip, i) in clips"
         :key="i"
+        v-reveal="{ delay: i * 80 }"
         :filename="`clip_${String(i + 1).padStart(2, '0')}.mp4`"
         :title="clip.title"
         :meta="`${clip.views} · ${clip.date}`"

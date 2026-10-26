@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type TitleColor = 'lavender' | 'pink' | 'dark'
+type TitleColor = 'lavender' | 'pink' | 'butter' | 'dark'
 
 const props = withDefaults(
   defineProps<{
@@ -27,6 +27,7 @@ const bar = computed(
     ({
       lavender: 'bg-lavender border-ink',
       pink: 'bg-pink border-ink',
+      butter: 'bg-butter border-ink',
       dark: 'bg-plum-600 border-grape',
     })[props.titleColor],
 )
