@@ -9,7 +9,9 @@ import { motionAllowed, prefersReducedMotion } from '../composables/useMotion'
 import { HEART_LIFETIME_MS, addHearts, makeHearts, type Heart } from '../lib/hearts'
 
 const base = import.meta.env.BASE_URL
-const avatarSrc = avatar.src && !/^https?:|^\//.test(avatar.src) ? base + avatar.src : avatar.src
+const withBase = (src: string) => (src && !/^https?:|^\//.test(src) ? base + src : src)
+const avatarSrc = withBase(avatar.src)
+const avatarSrcset = avatar.widths.map((w) => `${withBase(`avatar-${w}.webp`)} ${w}w`).join(', ')
 
 // Boot bar: fills on every page load after the welcome window opens, counting up in the
 // same 16 chunky steps as the CSS animation, then says "ready ✓".
@@ -99,7 +101,17 @@ onBeforeUnmount(() => {
 
     <div class="relative flex min-w-0 flex-[1_1_380px] flex-col gap-6">
       <RetroWindow v-reveal="{ delay: 80 }" title="untitled — paint" title-color="pink" :buttons="['#FFFFFF', '#FFFFFF']">
-        <img v-if="avatarSrc" :src="avatarSrc" :alt="avatar.alt" class="block aspect-[4/4.2] w-full bg-lilac-100 object-contain" />
+        <img
+          v-if="avatarSrc"
+          :src="avatarSrc"
+          :srcset="avatarSrcset"
+          sizes="(min-width: 1024px) 500px, calc(100vw - 72px)"
+          :alt="avatar.alt"
+          width="1200"
+          height="1200"
+          fetchpriority="high"
+          class="block aspect-square h-auto w-full bg-lilac-100 object-cover"
+        />
         <div
           v-else
           class="flex aspect-[4/4.2] flex-col items-center justify-center gap-3 bg-lilac-100 p-6 text-center text-link"

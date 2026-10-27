@@ -31,11 +31,12 @@ export const hero = {
 }
 
 export const avatar = {
-  /** Put the transparent PNG in /public and set e.g. src: 'avatar.png' */
-  src: '',
-  alt: 'Duckie’s anime avatar: lavender hoodie, a bow and a cat',
+  /** Square image in /public; `widths` lists the sizes saved as avatar-<width>.webp (empty src shows the placeholder) */
+  src: 'avatar-1200.webp',
+  widths: [640, 1200],
+  alt: 'Pixel-art portrait of Duckie with eyes closed, wearing lavender headphones covered in daisies, in front of retro Windows desktop windows',
   placeholder: '[YOUR ANIME AVATAR ART]',
-  placeholderNote: 'The lavender-hoodie avatar with the bow and cat goes here — transparent PNG.',
+  placeholderNote: 'Her square portrait goes here.',
 }
 
 export const affirmation = {
