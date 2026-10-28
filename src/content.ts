@@ -2,6 +2,7 @@
 // Anything still in [BRACKETS] is a placeholder waiting for real content.
 
 import type { IconName } from './components/icons'
+import type { DuckAccessory } from './components/duckAccessories'
 
 export type Tone = 'lilac' | 'pink'
 
@@ -16,8 +17,8 @@ export const nav = [
   { label: 'about', href: '#about' },
   { label: 'streams', href: '#schedule' },
   { label: 'side quests', href: '#quests' },
-  { label: 'clips', href: '#clips' },
   { label: 'pond', href: '#pond' },
+  { label: 'clips', href: '#clips' },
   { label: 'community', href: '#community' },
 ]
 
@@ -92,6 +93,8 @@ export interface PondDuck {
   color: string
   /** their own lines; ducks also say the generic ones. Leave out for generic quacks only. */
   lines?: string[]
+  /** things to wear, see src/components/duckAccessories.ts (e.g. ['swept-hair', 'glasses']) */
+  accessories?: DuckAccessory[]
 }
 
 // The pond: one duck per viewer who asked to be in it (only add people who said yes!).
@@ -105,12 +108,12 @@ export const pond: { title: string; blurb: string; breadLabel: string; genericLi
   genericLines: ['quack!', 'first!!', 'is she live yet?', '*paddles happily*', 'hi chat', 'bread? 👀', 'quack quack', 'o7'],
   ducks: [
     { name: '[VIEWER 1]', color: '#FFE27A', lines: ['[THEIR CATCHPHRASE]'] },
-    { name: '[VIEWER 2]', color: '#F4A6C8' },
+    { name: 'chukaime', color: '#F4A6C8' },
     { name: '[VIEWER 3]', color: '#F7B267', lines: ['[THEIR CATCHPHRASE]'] },
-    { name: '[VIEWER 4]', color: '#FFFFFF' },
-    { name: '[VIEWER 5]', color: '#A8E0C8' },
+    { name: '34tm4n', color: '#3A3546', accessories: ['bat-mask'], lines: ["I'm Batman!"] },
+    { name: 'akshaykhanna', color: '#F7D9B0', accessories: ['swept-hair', 'glasses'] },
     { name: '[VIEWER 6]', color: '#FFC09F', lines: ['[THEIR CATCHPHRASE]'] },
-    { name: '[VIEWER 7]', color: '#A9D3F5' },
+    { name: 'Damirox_PL', color: '#A9D3F5' },
     { name: '[VIEWER 8]', color: '#FFE27A' },
   ],
 }

@@ -3,10 +3,11 @@ import { ref, watch } from 'vue'
 import RetroWindow from '../components/RetroWindow.vue'
 import PixelDuck from '../components/PixelDuck.vue'
 import PixelSprite from '../components/PixelSprite.vue'
-import { pond } from '../content'
+import { pond, type PondDuck } from '../content'
 import { MAX_DUCKS_NARROW, MAX_DUCKS_WIDE, pickDucks } from '../lib/pond'
 import { usePond } from '../composables/usePond'
 import { useInViewport } from '../composables/useMotion'
+import { duckAccessories } from '../components/duckAccessories'
 
 const narrow = typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches
 const shown = pickDucks(pond.ducks, narrow ? MAX_DUCKS_NARROW : MAX_DUCKS_WIDE)
@@ -16,6 +17,9 @@ const bobDelays = shown.map(() => `${-Math.round(Math.random() * 900)}ms`)
 const pondEl = ref<HTMLElement | null>(null)
 const { setDuckEl, bubbleEl, bubble, crumbs, announcement, running, onDuckClick, onDuckFocus, hold, throwBreadAt, onWaterClick } =
   usePond(shown, pond.genericLines, pondEl)
+
+const duckLabel = (d: PondDuck) =>
+  [`${d.name}, a duck in the pond`, ...(d.accessories ?? []).map((a) => duckAccessories[a].label)].join(', ')
 
 function setBubbleEl(el: unknown) {
   bubbleEl.value = (el as HTMLElement | null) ?? null
@@ -91,7 +95,7 @@ const breadColors = { '#': '#2A1F3D', t: '#C98A4B', c: '#F6DFA6' }
             <button
               type="button"
               class="duck-btn"
-              :aria-label="`${d.name}, a duck in the pond`"
+              :aria-label="duckLabel(d)"
               @click.stop="onDuckClick(i)"
               @focus="onDuckFocus(i, $event)"
               @blur="hold(i, false)"
@@ -100,7 +104,7 @@ const breadColors = { '#': '#2A1F3D', t: '#C98A4B', c: '#F6DFA6' }
             >
               <span class="duck-bounce">
                 <span class="duck-bob" :style="{ animationDelay: bobDelays[i] }">
-                  <span class="duck-sprite"><PixelDuck :color="d.color" /></span>
+                  <span class="duck-sprite"><PixelDuck :color="d.color" :accessories="d.accessories" /></span>
                 </span>
               </span>
               <span class="duck-name">{{ d.name }}</span>

@@ -22,8 +22,8 @@ import { pond } from './content'
       <HeroSection />
       <AboutSection />
       <QuestsSection />
-      <ClipsSection />
       <PondSection v-if="pond.ducks.length" />
+      <ClipsSection />
       <CommunitySection />
     </main>
     <SiteFooter />
