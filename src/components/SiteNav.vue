@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import DuckLogo from './DuckLogo.vue'
-import { nav, twitch } from '../content'
+import { nav, pond, twitch } from '../content'
 import { linkAttrs } from '../lib/links'
 import { useStreams } from '../composables/useStreams'
 import { usePageVisible } from '../composables/useMotion'
 
+// the pond link only shows while the pond has ducks (see content.ts)
+const links = nav.filter((item) => item.href !== '#pond' || pond.ducks.length > 0)
 const open = ref(false)
 const { isLive } = useStreams()
 const pageVisible = usePageVisible()
@@ -50,7 +52,7 @@ onBeforeUnmount(() => {
       </a>
 
       <ul class="m-0 flex list-none flex-wrap gap-1 p-0 font-pixel text-[17px] max-[640px]:hidden">
-        <li v-for="item in nav" :key="item.href">
+        <li v-for="item in links" :key="item.href">
           <a
             :href="item.href"
             class="focus-light block rounded-lg px-3.5 py-2.5 text-paper no-underline hover:bg-plum-700 hover:text-paper"
@@ -93,11 +95,11 @@ onBeforeUnmount(() => {
         class="flex flex-col gap-0.5 border-t-2 border-plum-600 px-4 pt-2 pb-6 font-pixel text-[22px] min-[641px]:hidden"
       >
         <ul class="m-0 list-none p-0">
-          <li v-for="(item, i) in nav" :key="item.href" class="menu-item" :style="{ animationDelay: `${i * 30}ms` }">
+          <li v-for="(item, i) in links" :key="item.href" class="menu-item" :style="{ animationDelay: `${i * 30}ms` }">
             <a
               :href="item.href"
               class="focus-light block rounded-lg px-2.5 py-3.5 text-paper no-underline hover:bg-plum-700 hover:text-paper"
-              :class="i < nav.length - 1 && 'border-b border-dashed border-plum-600'"
+              :class="i < links.length - 1 && 'border-b border-dashed border-plum-600'"
               @click="close()"
             >{{ item.label }}</a>
           </li>
@@ -106,7 +108,7 @@ onBeforeUnmount(() => {
           :href="twitch.channel"
           v-bind="linkAttrs(twitch.channel)"
           class="menu-item focus-light mt-3.5 flex items-center justify-center gap-2.5 rounded-full bg-pink p-4 text-[19px] font-semibold text-ink no-underline hover:text-ink"
-          :style="{ animationDelay: `${nav.length * 30}ms` }"
+          :style="{ animationDelay: `${links.length * 30}ms` }"
         >
           <span
             aria-hidden="true"

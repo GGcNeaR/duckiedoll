@@ -17,6 +17,7 @@ export const nav = [
   { label: 'streams', href: '#schedule' },
   { label: 'side quests', href: '#quests' },
   { label: 'clips', href: '#clips' },
+  { label: 'pond', href: '#pond' },
   { label: 'community', href: '#community' },
 ]
 
@@ -84,7 +85,37 @@ export const clips: Clip[] = [
 ]
 export const clipThumbnailPlaceholder = '[CLIP THUMBNAIL]'
 
-export const community: { title: string; blurb: string; cta: string; href: string; icon: IconName }[] = [
+export interface PondDuck {
+  /** their Twitch name, shown under the duck */
+  name: string
+  /** body colour, #rrggbb */
+  color: string
+  /** their own lines; ducks also say the generic ones. Leave out for generic quacks only. */
+  lines?: string[]
+}
+
+// The pond: one duck per viewer who asked to be in it (only add people who said yes!).
+// Up to 12 swim at once (6 on phones); with more, a random set shows on each visit.
+// Pick colours that stand out from the lavender water (avoid lavender/purple).
+// An empty `ducks` list hides the section and its nav link.
+export const pond: { title: string; blurb: string; breadLabel: string; genericLines: string[]; ducks: PondDuck[] } = {
+  title: 'the pond',
+  blurb: 'Every duck here is one of the flock. Want to be a duck? Ask in chat!',
+  breadLabel: 'throw bread',
+  genericLines: ['quack!', 'first!!', 'is she live yet?', '*paddles happily*', 'hi chat', 'bread? 👀', 'quack quack', 'o7'],
+  ducks: [
+    { name: '[VIEWER 1]', color: '#FFE27A', lines: ['[THEIR CATCHPHRASE]'] },
+    { name: '[VIEWER 2]', color: '#F4A6C8' },
+    { name: '[VIEWER 3]', color: '#F7B267', lines: ['[THEIR CATCHPHRASE]'] },
+    { name: '[VIEWER 4]', color: '#FFFFFF' },
+    { name: '[VIEWER 5]', color: '#A8E0C8' },
+    { name: '[VIEWER 6]', color: '#FFC09F', lines: ['[THEIR CATCHPHRASE]'] },
+    { name: '[VIEWER 7]', color: '#A9D3F5' },
+    { name: '[VIEWER 8]', color: '#FFE27A' },
+  ],
+}
+
+export const community:{ title: string; blurb: string; cta: string; href: string; icon: IconName }[] = [
   // [TODO] Discord invite link
   { title: 'Discord', blurb: 'Chat between streams', cta: 'join', href: '#', icon: 'discord' },
   { title: 'Instagram', blurb: 'Selfies, doodles and cozy bits', cta: 'peek', href: 'https://www.instagram.com/duckiedoll', icon: 'instagram' },

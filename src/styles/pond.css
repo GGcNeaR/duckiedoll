@@ -1,0 +1,143 @@
+/* The pond (src/sections/PondSection.vue). Ducks are positioned from JS (usePond) via
+ * transform on .pond-duck; everything here is look and the small CSS animations.
+ * As in motion.css, the normal styles are the resting state, so the global
+ * reduced-motion rule leaves ducks still, crumbs visible and bubbles simply shown. */
+
+@keyframes bob {
+  to { transform: translateY(-2px); }
+}
+@keyframes bubbleIn {
+  from { opacity: 0; scale: 0.6; }
+}
+@keyframes crumb {
+  0% { opacity: 0; translate: 0 -18px; }
+  5% { opacity: 1; translate: 0 0; }
+  85% { opacity: 1; }
+  100% { opacity: 0; translate: 0 4px; scale: 0.5; }
+}
+
+/* lavender water with pixel ripples */
+.pond-water {
+  background-color: #b9a7ea;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='90' shape-rendering='crispEdges' fill='%23e4d8f6' fill-opacity='.7'%3E%3Crect x='12' y='20' width='8' height='2'/%3E%3Crect x='20' y='18' width='6' height='2'/%3E%3Crect x='26' y='20' width='8' height='2'/%3E%3Crect x='84' y='62' width='6' height='2'/%3E%3Crect x='90' y='60' width='6' height='2'/%3E%3Crect x='96' y='62' width='6' height='2'/%3E%3Crect x='102' y='60' width='4' height='2'/%3E%3C/svg%3E"),
+    linear-gradient(#c6b6f0, #a993e2);
+  background-size: 140px 90px, 100% 100%;
+}
+@media (hover: hover) and (pointer: fine) {
+  .pond-water { cursor: url("../assets/cursors/duck-point.svg") 1 15, pointer; }
+}
+
+/* each duck: a zero-size anchor at its centre, moved by usePond */
+.pond-duck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  will-change: transform;
+}
+.duck-btn {
+  position: absolute;
+  top: -20px; /* half the sprite: the duck's centre sits on the anchor */
+  left: 0;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+.duck-btn:focus-visible {
+  outline: 2px dashed var(--color-ink);
+  outline-offset: 3px;
+}
+.duck-bounce,
+.duck-bob,
+.duck-sprite { display: block; }
+.duck-bob { animation: bob 0.9s steps(2, jump-none) infinite alternate; }
+.is-paused .duck-bob { animation-play-state: paused; }
+/* sprites face right; usePond sets data-facing as ducks turn */
+[data-facing="left"] .duck-sprite { transform: scaleX(-1); }
+/* a little ripple under each duck */
+.duck-sprite::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin: -3px 4px 0;
+  background: #e4d8f6;
+  opacity: 0.8;
+}
+.duck-name {
+  padding: 1px 6px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 6px;
+  background: rgb(243 237 251 / 0.92);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: var(--color-ink);
+}
+
+/* speech bubble above the duck (below it near the top edge); --shift keeps it inside */
+.duck-bubble {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  margin: 0;
+  width: max-content;
+  max-width: 180px;
+  padding: 6px 10px;
+  border: 2px solid var(--color-ink);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 3px 3px 0 var(--color-ink);
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  pointer-events: none;
+  transform: translateX(calc(-50% + var(--shift, 0px)));
+  transform-origin: 50% 100%;
+  animation: bubbleIn 180ms var(--ease-pop) both;
+}
+.duck-bubble.is-below {
+  top: 46px;
+  bottom: auto;
+  transform-origin: 50% 0;
+}
+/* the tail always points at the duck, wherever the bubble shifted to */
+.duck-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - var(--shift, 0px));
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-right: 2px solid var(--color-ink);
+  border-bottom: 2px solid var(--color-ink);
+  background: #fff;
+  rotate: 45deg;
+}
+.duck-bubble.is-below::after {
+  top: -7px;
+  bottom: auto;
+  rotate: 225deg;
+}
+
+.crumb {
+  width: 9px;
+  height: 7px;
+  margin: -3px 0 0 -4px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 2px;
+  background: #e8b86b;
+  animation: crumb 8s ease both; /* = CRUMB_LIFETIME in src/lib/pond.ts */
+}

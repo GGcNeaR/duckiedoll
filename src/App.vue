@@ -4,9 +4,11 @@ import HeroSection from './sections/HeroSection.vue'
 import AboutSection from './sections/AboutSection.vue'
 import QuestsSection from './sections/QuestsSection.vue'
 import ClipsSection from './sections/ClipsSection.vue'
+import PondSection from './sections/PondSection.vue'
 import CommunitySection from './sections/CommunitySection.vue'
 import SiteFooter from './sections/SiteFooter.vue'
 import { NEW_TAB_NOTE_ID } from './lib/links'
+import { pond } from './content'
 </script>
 
 <template>
@@ -21,6 +23,7 @@ import { NEW_TAB_NOTE_ID } from './lib/links'
       <AboutSection />
       <QuestsSection />
       <ClipsSection />
+      <PondSection v-if="pond.ducks.length" />
       <CommunitySection />
     </main>
     <SiteFooter />

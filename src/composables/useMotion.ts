@@ -25,13 +25,17 @@ export function usePageVisible(): Ref<boolean> {
   return pageVisible
 }
 
-/** Whether an element is at least partly on screen. Assumes visible until told otherwise. */
-export function useInViewport(el: Ref<Element | null>): Ref<boolean> {
-  const inView = ref(true)
+/**
+ * Whether an element is at least partly on screen. Until the first check, `initial`
+ * (visible by default). `rootMargin` grows the screen area, e.g. '400px 0px' for "nearly".
+ */
+export function useInViewport(el: Ref<Element | null>, initial = true, rootMargin = '0px'): Ref<boolean> {
+  const inView = ref(initial)
   let io: IntersectionObserver | undefined
   onMounted(() => {
+    if (!('IntersectionObserver' in window)) inView.value = true
     if (!el.value || !('IntersectionObserver' in window)) return
-    io = new IntersectionObserver(([entry]) => (inView.value = entry.isIntersecting))
+    io = new IntersectionObserver(([entry]) => (inView.value = entry.isIntersecting), { rootMargin })
     io.observe(el.value)
   })
   onBeforeUnmount(() => io?.disconnect())
