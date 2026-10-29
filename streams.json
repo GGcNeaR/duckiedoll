@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "LONG TIME NO QUACK, but this time we are gathering for a Scooby Snack !socials !driscord",
-    "startedAt": "2026-10-29T16:14:34Z",
-    "viewerCount": 149
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "LONG TIME NO QUACK, but this time we are gathering for a Scooby Snack !socials !driscord",
+      "startedAt": "2026-10-29T16:14:34Z",
+      "duration": 10310,
+      "url": "https://www.twitch.tv/videos/2914019974"
+    },
     {
       "title": "WE TRYIN THIS AGAIN !patreon !driscord",
       "startedAt": "2026-10-26T17:09:12Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-10-20T15:18:12Z",
       "duration": 11890,
       "url": "https://www.twitch.tv/videos/2905954498"
-    },
-    {
-      "title": "I BLAME EVERYTHING ON M*NDAY also hi T . T im not late, u r just early  -   ⊹˚ ༘⋆✿ *ੈ𑁍 ⚘ 𓇢𓆸  O . O   ♥️ !driscord !socials !wishlist",
-      "startedAt": "2026-10-19T15:30:18Z",
-      "duration": 24940,
-      "url": "https://www.twitch.tv/videos/2905109742"
     }
   ],
   "usualTime": "afternoons",
@@ -66,26 +62,26 @@
   ],
   "clips": [
     {
+      "title": "IS THAT NAMI?!",
+      "url": "https://www.twitch.tv/duckiedoll/clip/ConfidentBetterYamMikeHogu--vPX7WYw4TYcbuFX",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/92745218-239c-4599-a939-960cbef8624a/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 20,
+      "createdAt": "2026-10-29T16:56:20Z"
+    },
+    {
       "title": "SHE IS CRAZY LET'S CHILL",
       "url": "https://www.twitch.tv/duckiedoll/clip/BoldVibrantWaterANELE-Vhh7jxOfpH50I2gj",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/286729fd-df1f-4db3-9419-79711af23f2a/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 41,
+      "viewCount": 43,
       "createdAt": "2026-10-26T18:02:30Z"
     },
     {
       "title": "Duckie sneeze",
       "url": "https://www.twitch.tv/duckiedoll/clip/HotLuckyTubersStrawBeary-UM606CuVCcPP6UWu",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b2eb52ea-1e2e-4cda-ba61-ab2c97e5c771/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 17,
+      "viewCount": 18,
       "createdAt": "2026-10-26T17:58:40Z"
-    },
-    {
-      "title": "Duckie shows off her balkan muscles",
-      "url": "https://www.twitch.tv/duckiedoll/clip/FrailSaltyOrangeOMGScoots-ggD8HhUVU81xskhs",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/dbf8e1d6-4a18-4a91-a23f-6a293a2a1763/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 65,
-      "createdAt": "2026-10-26T16:26:21Z"
     }
   ],
-  "updatedAt": "2026-10-29T17:11:42.947Z"
+  "updatedAt": "2026-10-29T20:34:58.623Z"
 }
