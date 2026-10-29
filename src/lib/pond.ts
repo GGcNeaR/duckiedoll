@@ -1,7 +1,7 @@
 // The pond: ducks that wander, chase bread and say things. Pure logic only (no DOM),
 // so it can be unit tested; src/composables/usePond.ts runs it every frame.
 
-export const MAX_DUCKS_WIDE = 12
+export const MAX_DUCKS_WIDE = 8
 export const MAX_DUCKS_NARROW = 6
 export const PERSONAL_LINE_CHANCE = 0.6
 export const MAX_CRUMBS = 6

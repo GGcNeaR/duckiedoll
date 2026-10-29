@@ -35,6 +35,8 @@ export interface Bubble {
  */
 export function usePond(ducks: readonly PondDuck[], genericLines: readonly string[], pondEl: Ref<HTMLElement | null>) {
   const duckEls: HTMLElement[] = []
+  const nameWidths: number[] = []
+  const nameShifts: number[] = []
   const bubbleEl = ref<HTMLElement | null>(null)
   const bubble = ref<Bubble | null>(null)
   const crumbView = shallowRef<Crumb[]>([])
@@ -60,6 +62,7 @@ export function usePond(ducks: readonly PondDuck[], genericLines: readonly strin
   function setDuckEl(i: number, el: Element | null) {
     if (!el) return
     duckEls[i] = el as HTMLElement
+    nameWidths[i] = el.querySelector<HTMLElement>('.duck-name')?.offsetWidth ?? 0
     if (sim[i]) place(sim[i], bubble.value?.duck)
   }
 
@@ -70,6 +73,12 @@ export function usePond(ducks: readonly PondDuck[], genericLines: readonly strin
     // ducks further down the pond sit in front; the talking one above everything
     el.style.zIndex = String(d.id === talking ? 1000 : Math.round(d.y))
     el.dataset.facing = d.facing === 1 ? 'right' : 'left'
+    // a name wider than the duck slides inward near the edges (only touched when it changes)
+    const shift = Math.round(bubbleShift(d.x, nameWidths[d.id] ?? 0, size.w, 4))
+    if (shift !== (nameShifts[d.id] ?? 0)) {
+      nameShifts[d.id] = shift
+      el.style.setProperty('--name-shift', `${shift}px`)
+    }
   }
 
   function render() {
@@ -205,6 +214,11 @@ export function usePond(ducks: readonly PondDuck[], genericLines: readonly strin
 
   onMounted(() => {
     measure()
+    // name tags are measured as ducks appear, maybe before the pixel font has loaded
+    document.fonts?.ready.then(() => {
+      duckEls.forEach((el, i) => (nameWidths[i] = el.querySelector<HTMLElement>('.duck-name')?.offsetWidth ?? 0))
+      render()
+    })
     if ('ResizeObserver' in window) {
       ro = new ResizeObserver(measure)
       if (pondEl.value) ro.observe(pondEl.value)

@@ -98,7 +98,7 @@ export interface PondDuck {
 }
 
 // The pond: one duck per viewer who asked to be in it (only add people who said yes!).
-// Up to 12 swim at once (6 on phones); with more, a random set shows on each visit.
+// Add as many as you like: 8 swim at once (6 on phones), a random set picked on each visit.
 // Pick colours that stand out from the lavender water (avoid lavender/purple).
 // An empty `ducks` list hides the section and its nav link.
 export const pond: { title: string; blurb: string; breadLabel: string; genericLines: string[]; ducks: PondDuck[] } = {
@@ -107,14 +107,18 @@ export const pond: { title: string; blurb: string; breadLabel: string; genericLi
   breadLabel: 'throw bread',
   genericLines: ['quack!', 'first!!', 'is she live yet?', '*paddles happily*', 'hi chat', 'bread? 👀', 'quack quack', 'o7'],
   ducks: [
-    { name: '[VIEWER 1]', color: '#FFE27A', lines: ['[THEIR CATCHPHRASE]'] },
-    { name: 'chukaime', color: '#F4A6C8' },
-    { name: '[VIEWER 3]', color: '#F7B267', lines: ['[THEIR CATCHPHRASE]'] },
+    { name: 'MusicManiak12', color: '#A8E0C8' },
+    { name: 'itschola', color: '#F4A6C8' },
+    { name: 'not_too_weird', color: '#F7B267' },
     { name: '34tm4n', color: '#3A3546', accessories: ['bat-mask'], lines: ["I'm Batman!"] },
     { name: 'akshaykhanna', color: '#F7D9B0', accessories: ['swept-hair', 'glasses'] },
-    { name: '[VIEWER 6]', color: '#FFC09F', lines: ['[THEIR CATCHPHRASE]'] },
+    { name: 'LordDextro', color: '#FFC09F' },
     { name: 'Damirox_PL', color: '#A9D3F5' },
-    { name: '[VIEWER 8]', color: '#FFE27A' },
+    { name: 'edi12131994', color: '#FFE27A' },
+    { name: 'iniquity_the_sloth', color: '#C9A27E' },
+    { name: 'knucklebuckle9', color: '#C5E17A' },
+    { name: '11ask', color: '#F2A3A3' },
+    { name: 'BeforeWasBetter', color: '#9FD8E0' },
   ],
 }
 
