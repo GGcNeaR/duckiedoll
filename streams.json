@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "NOT \"YOUR BASIC AVERAGE GIRL\" - !socials !driscord",
-    "startedAt": "2026-10-30T16:41:58Z",
-    "viewerCount": 93
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "NOT \"YOUR BASIC AVERAGE GIRL\" - !socials !driscord",
+      "startedAt": "2026-10-30T16:41:58Z",
+      "duration": 22680,
+      "url": "https://www.twitch.tv/videos/2914929422"
+    },
     {
       "title": "LONG TIME NO QUACK, but this time we are gathering for a Scooby Snack !socials !driscord",
       "startedAt": "2026-10-29T16:14:34Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-10-26T15:51:54Z",
       "duration": 4624,
       "url": "https://www.twitch.tv/videos/2911377814"
-    },
-    {
-      "title": "just a little bit of side quests  -   ⊹˚ ༘⋆✿ *ੈ𑁍 ⚘ 𓇢𓆸  O . O   ♥️ !driscord !socials !wishlist",
-      "startedAt": "2026-10-20T15:18:12Z",
-      "duration": 11890,
-      "url": "https://www.twitch.tv/videos/2905954498"
     }
   ],
   "usualTime": "afternoons",
@@ -88,5 +84,5 @@
       "createdAt": "2026-10-26T18:02:30Z"
     }
   ],
-  "updatedAt": "2026-10-30T22:27:16.519Z"
+  "updatedAt": "2026-10-31T01:44:26.983Z"
 }
