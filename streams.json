@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "last stream.............................................. before the subathon - !socials !driscord",
-    "startedAt": "2026-11-02T16:02:22Z",
-    "viewerCount": 184
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "last stream.............................................. before the subathon - !socials !driscord",
+      "startedAt": "2026-11-02T16:02:22Z",
+      "duration": 9610,
+      "url": "https://www.twitch.tv/videos/2917634988"
+    },
     {
       "title": "Ms. Kopetski died in the war. I'm Barb Wire. - !socials !driscord",
       "startedAt": "2026-10-31T17:05:12Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-10-29T16:14:34Z",
       "duration": 10310,
       "url": "https://www.twitch.tv/videos/2914019974"
-    },
-    {
-      "title": "WE TRYIN THIS AGAIN !patreon !driscord",
-      "startedAt": "2026-10-26T17:09:12Z",
-      "duration": 5940,
-      "url": "https://www.twitch.tv/videos/2911434487"
     }
   ],
   "usualTime": "afternoons",
@@ -69,6 +65,13 @@
   ],
   "clips": [
     {
+      "title": "Точно така😡",
+      "url": "https://www.twitch.tv/duckiedoll/clip/ArtisticColdJamStoneLightning-CbciLj9_6HRIFro1",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f128ecfc-f404-4552-8d6c-7535084341e0/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 27,
+      "createdAt": "2026-11-02T17:03:42Z"
+    },
+    {
       "title": "NOT \"YOUR BASIC AVERAGE GIRL\" - !socials !driscord",
       "url": "https://www.twitch.tv/duckiedoll/clip/PiliableCooperativeSandpiperWholeWheat-JGTdqxeqfKvg1OJt",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/830a7af3-2468-4321-b778-d1fac0d88ec7/landscape/thumb/thumb-0000000000-480x272.jpg",
@@ -81,14 +84,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f871b9ba-be0a-4316-8a58-f1f730c20af6/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 21,
       "createdAt": "2026-10-29T17:58:45Z"
-    },
-    {
-      "title": "IS THAT NAMI?!",
-      "url": "https://www.twitch.tv/duckiedoll/clip/ConfidentBetterYamMikeHogu--vPX7WYw4TYcbuFX",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/92745218-239c-4599-a939-960cbef8624a/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 55,
-      "createdAt": "2026-10-29T16:56:20Z"
     }
   ],
-  "updatedAt": "2026-11-02T18:40:05.708Z"
+  "updatedAt": "2026-11-03T01:17:29.858Z"
 }
