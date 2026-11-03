@@ -2,7 +2,7 @@
   "live": {
     "title": "[DAY 1] DUCKIETON -  !socials !driscord",
     "startedAt": "2026-11-03T16:00:15Z",
-    "viewerCount": 8
+    "viewerCount": 217
   },
   "recent": [
     {
@@ -70,26 +70,26 @@
   ],
   "clips": [
     {
+      "title": "nothing much as always",
+      "url": "https://www.twitch.tv/duckiedoll/clip/EagerWildDurianHassaanChop-Pf4Kdx2FEWWF_mr8",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8ff95d9e-51f0-47d5-bdd8-dbcc81fb96c9/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 12,
+      "createdAt": "2026-11-03T16:43:31Z"
+    },
+    {
+      "title": "washing machine",
+      "url": "https://www.twitch.tv/duckiedoll/clip/FurryAcceptableDogeSMOrc-qaPHJO-riBYLqv1t",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3836c28e-a869-497a-8f48-6212b2b3f394/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 14,
+      "createdAt": "2026-11-02T18:40:57Z"
+    },
+    {
       "title": "Точно така😡",
       "url": "https://www.twitch.tv/duckiedoll/clip/ArtisticColdJamStoneLightning-CbciLj9_6HRIFro1",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f128ecfc-f404-4552-8d6c-7535084341e0/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 33,
+      "viewCount": 37,
       "createdAt": "2026-11-02T17:03:42Z"
-    },
-    {
-      "title": "NOT \"YOUR BASIC AVERAGE GIRL\" - !socials !driscord",
-      "url": "https://www.twitch.tv/duckiedoll/clip/PiliableCooperativeSandpiperWholeWheat-JGTdqxeqfKvg1OJt",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/830a7af3-2468-4321-b778-d1fac0d88ec7/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 33,
-      "createdAt": "2026-10-31T05:05:40Z"
-    },
-    {
-      "title": "duckiedoll *Daphne ScoobyDoo Halloween 🎃👻💀Costume*",
-      "url": "https://www.twitch.tv/duckiedoll/clip/SmoothSpeedyBaguetteArgieB8-lJlPOwlpazKN-tDQ",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f871b9ba-be0a-4316-8a58-f1f730c20af6/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 22,
-      "createdAt": "2026-10-29T17:58:45Z"
     }
   ],
-  "updatedAt": "2026-11-03T16:03:32.576Z"
+  "updatedAt": "2026-11-03T21:43:14.282Z"
 }
