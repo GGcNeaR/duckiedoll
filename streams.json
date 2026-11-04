@@ -1,10 +1,16 @@
 {
   "live": {
     "title": "[DAY 1] DUCKIETON -  !socials !driscord",
-    "startedAt": "2026-11-03T16:00:15Z",
-    "viewerCount": 217
+    "startedAt": "2026-11-03T22:21:24Z",
+    "viewerCount": 173
   },
   "recent": [
+    {
+      "title": "[DAY 1] DUCKIETON -  !socials !driscord",
+      "startedAt": "2026-11-03T16:00:15Z",
+      "duration": 22770,
+      "url": "https://www.twitch.tv/videos/2918504504"
+    },
     {
       "title": "last stream.............................................. before the subathon - !socials !driscord",
       "startedAt": "2026-11-02T16:02:22Z",
@@ -22,16 +28,11 @@
       "startedAt": "2026-10-30T16:41:58Z",
       "duration": 22680,
       "url": "https://www.twitch.tv/videos/2914929422"
-    },
-    {
-      "title": "LONG TIME NO QUACK, but this time we are gathering for a Scooby Snack !socials !driscord",
-      "startedAt": "2026-10-29T16:14:34Z",
-      "duration": 10310,
-      "url": "https://www.twitch.tv/videos/2914019974"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-03T22:21:24Z",
     "2026-11-03T16:00:15Z",
     "2026-11-02T16:02:22Z",
     "2026-10-31T17:05:12Z",
@@ -70,26 +71,26 @@
   ],
   "clips": [
     {
+      "title": "She shrank.....",
+      "url": "https://www.twitch.tv/duckiedoll/clip/HedonisticLaconicCurryPraiseIt-OTIf-UMYhQZEnwZy",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/09d63ad9-6e2e-4585-87aa-91861373cdd6/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 12,
+      "createdAt": "2026-11-03T17:25:54Z"
+    },
+    {
+      "title": "*punch*",
+      "url": "https://www.twitch.tv/duckiedoll/clip/BloodyTalentedLocustRiPepperonis-YslG8iZ4dB5AMGQP",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5b414d11-16ea-46b3-84d2-51c8222649fc/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 10,
+      "createdAt": "2026-11-03T17:16:51Z"
+    },
+    {
       "title": "nothing much as always",
       "url": "https://www.twitch.tv/duckiedoll/clip/EagerWildDurianHassaanChop-Pf4Kdx2FEWWF_mr8",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8ff95d9e-51f0-47d5-bdd8-dbcc81fb96c9/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 12,
+      "viewCount": 17,
       "createdAt": "2026-11-03T16:43:31Z"
-    },
-    {
-      "title": "washing machine",
-      "url": "https://www.twitch.tv/duckiedoll/clip/FurryAcceptableDogeSMOrc-qaPHJO-riBYLqv1t",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3836c28e-a869-497a-8f48-6212b2b3f394/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 14,
-      "createdAt": "2026-11-02T18:40:57Z"
-    },
-    {
-      "title": "Точно така😡",
-      "url": "https://www.twitch.tv/duckiedoll/clip/ArtisticColdJamStoneLightning-CbciLj9_6HRIFro1",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f128ecfc-f404-4552-8d6c-7535084341e0/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 37,
-      "createdAt": "2026-11-02T17:03:42Z"
     }
   ],
-  "updatedAt": "2026-11-03T21:43:14.282Z"
+  "updatedAt": "2026-11-04T01:42:02.338Z"
 }
