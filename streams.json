@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DAY 3] Bday DUCKIETON (Subathon)  -  !socials !driscord",
-    "startedAt": "2026-11-03T22:21:24Z",
-    "viewerCount": 199
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DAY 1] DUCKIETON -  !socials !driscord",
+      "startedAt": "2026-11-03T22:21:24Z",
+      "duration": 170830,
+      "url": "https://www.twitch.tv/videos/2918806690"
+    },
     {
       "title": "[DAY 1] DUCKIETON -  !socials !driscord",
       "startedAt": "2026-11-03T16:00:15Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-10-31T17:05:12Z",
       "duration": 16260,
       "url": "https://www.twitch.tv/videos/2915903837"
-    },
-    {
-      "title": "NOT \"YOUR BASIC AVERAGE GIRL\" - !socials !driscord",
-      "startedAt": "2026-10-30T16:41:58Z",
-      "duration": 22680,
-      "url": "https://www.twitch.tv/videos/2914929422"
     }
   ],
   "usualTime": "afternoons",
@@ -74,7 +70,7 @@
       "title": "Smol streamer gets scared by pixels",
       "url": "https://www.twitch.tv/duckiedoll/clip/ApatheticSilkyRadishPRChase-m4io5_L_DQxZzJWI",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3318abba-e55e-4b84-a870-5b1fef9070f7/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 10,
+      "viewCount": 11,
       "createdAt": "2026-11-04T17:42:22Z"
     },
     {
@@ -88,9 +84,9 @@
       "title": "She shrank.....",
       "url": "https://www.twitch.tv/duckiedoll/clip/HedonisticLaconicCurryPraiseIt-OTIf-UMYhQZEnwZy",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/09d63ad9-6e2e-4585-87aa-91861373cdd6/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 26,
+      "viewCount": 27,
       "createdAt": "2026-11-03T17:25:54Z"
     }
   ],
-  "updatedAt": "2026-11-05T17:28:45.048Z"
+  "updatedAt": "2026-11-05T22:48:15.593Z"
 }
