@@ -1,10 +1,16 @@
 {
   "live": {
     "title": "[DAY 4] Bday DUCKIETON (Subathon)  -  !socials !driscord",
-    "startedAt": "2026-11-05T23:24:58Z",
-    "viewerCount": 80
+    "startedAt": "2026-11-06T10:59:49Z",
+    "viewerCount": 149
   },
   "recent": [
+    {
+      "title": "[DAY 3] Bday DUCKIETON (Subathon)  -  !socials !driscord",
+      "startedAt": "2026-11-05T23:24:58Z",
+      "duration": 41370,
+      "url": "https://www.twitch.tv/videos/2920651036"
+    },
     {
       "title": "[DAY 1] DUCKIETON -  !socials !driscord",
       "startedAt": "2026-11-03T22:21:24Z",
@@ -22,16 +28,11 @@
       "startedAt": "2026-11-02T16:02:22Z",
       "duration": 9610,
       "url": "https://www.twitch.tv/videos/2917634988"
-    },
-    {
-      "title": "Ms. Kopetski died in the war. I'm Barb Wire. - !socials !driscord",
-      "startedAt": "2026-10-31T17:05:12Z",
-      "duration": 16260,
-      "url": "https://www.twitch.tv/videos/2915903837"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-06T10:59:49Z",
     "2026-11-05T23:24:58Z",
     "2026-11-03T22:21:24Z",
     "2026-11-03T16:00:15Z",
@@ -72,26 +73,26 @@
   ],
   "clips": [
     {
+      "title": "Duckie and Harmonica",
+      "url": "https://www.twitch.tv/duckiedoll/clip/FantasticSmallEmuTTours-M9BeULiZLK8WAexP",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/22556639-8bdc-480e-9ed7-3e9e8f405d56/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 11,
+      "createdAt": "2026-11-05T17:45:52Z"
+    },
+    {
       "title": "Smol streamer gets scared by pixels",
       "url": "https://www.twitch.tv/duckiedoll/clip/ApatheticSilkyRadishPRChase-m4io5_L_DQxZzJWI",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3318abba-e55e-4b84-a870-5b1fef9070f7/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 11,
+      "viewCount": 12,
       "createdAt": "2026-11-04T17:42:22Z"
     },
     {
       "title": "American exposed",
       "url": "https://www.twitch.tv/duckiedoll/clip/TacitEnchantingChoughCopyThis-YoTUeqcc8DQIUL7M",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/98c77388-b1ae-4220-afa9-848af053634e/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 16,
+      "viewCount": 18,
       "createdAt": "2026-11-04T00:22:21Z"
-    },
-    {
-      "title": "She shrank.....",
-      "url": "https://www.twitch.tv/duckiedoll/clip/HedonisticLaconicCurryPraiseIt-OTIf-UMYhQZEnwZy",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/09d63ad9-6e2e-4585-87aa-91861373cdd6/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 32,
-      "createdAt": "2026-11-03T17:25:54Z"
     }
   ],
-  "updatedAt": "2026-11-06T10:19:42.455Z"
+  "updatedAt": "2026-11-06T17:34:39.222Z"
 }
