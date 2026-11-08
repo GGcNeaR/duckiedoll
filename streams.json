@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DAY 6] Bday DUCKIETHON (Subathon)  -  !socials !driscord",
-    "startedAt": "2026-11-08T12:05:13Z",
-    "viewerCount": 167
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DAY 6] Bday DUCKIETHON (Subathon)  -  !socials !driscord",
+      "startedAt": "2026-11-08T12:05:13Z",
+      "duration": 32710,
+      "url": "https://www.twitch.tv/videos/2923061114"
+    },
     {
       "title": "[DAY 4] Bday DUCKIETON (Subathon)  -  !socials !driscord",
       "startedAt": "2026-11-06T10:59:49Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-03T22:21:24Z",
       "duration": 170830,
       "url": "https://www.twitch.tv/videos/2918806690"
-    },
-    {
-      "title": "[DAY 1] DUCKIETON -  !socials !driscord",
-      "startedAt": "2026-11-03T16:00:15Z",
-      "duration": 22770,
-      "url": "https://www.twitch.tv/videos/2918504504"
     }
   ],
   "usualTime": "afternoons",
@@ -74,10 +70,17 @@
   ],
   "clips": [
     {
+      "title": "Unforgivable birthday",
+      "url": "https://www.twitch.tv/duckiedoll/clip/InquisitiveSincereWeaselPeteZarollTie-3l3LHZi-cguuLlnT",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9923bd5e-c23b-400b-9ed6-692c20edbe08/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 23,
+      "createdAt": "2026-11-08T18:58:14Z"
+    },
+    {
       "title": "fatherhood is scarry",
       "url": "https://www.twitch.tv/duckiedoll/clip/GloriousFuriousOilKeepo-uvzqXSnRqO1kCKeP",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b5ea3c25-679b-481f-8947-25347861a691/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 26,
+      "viewCount": 27,
       "createdAt": "2026-11-07T21:36:09Z"
     },
     {
@@ -86,14 +89,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/22556639-8bdc-480e-9ed7-3e9e8f405d56/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 14,
       "createdAt": "2026-11-05T17:45:52Z"
-    },
-    {
-      "title": "Ethan appreciation",
-      "url": "https://www.twitch.tv/duckiedoll/clip/HonestFaintTofuGingerPower-S8J6BZH2J2UCxlZR",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3370517d-4cce-4e92-82a9-c0930307e10d/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 14,
-      "createdAt": "2026-11-04T17:47:58Z"
     }
   ],
-  "updatedAt": "2026-11-08T19:59:26.642Z"
+  "updatedAt": "2026-11-08T23:35:32.830Z"
 }
