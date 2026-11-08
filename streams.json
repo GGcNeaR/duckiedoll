@@ -1,10 +1,16 @@
 {
   "live": {
     "title": "[DAY 6] Bday DUCKIETHON (Subathon)  -  !socials !driscord",
-    "startedAt": "2026-11-06T10:59:49Z",
-    "viewerCount": 115
+    "startedAt": "2026-11-08T12:05:13Z",
+    "viewerCount": 196
   },
   "recent": [
+    {
+      "title": "[DAY 4] Bday DUCKIETON (Subathon)  -  !socials !driscord",
+      "startedAt": "2026-11-06T10:59:49Z",
+      "duration": 172654,
+      "url": "https://www.twitch.tv/videos/2921033691"
+    },
     {
       "title": "[DAY 3] Bday DUCKIETON (Subathon)  -  !socials !driscord",
       "startedAt": "2026-11-05T23:24:58Z",
@@ -22,16 +28,11 @@
       "startedAt": "2026-11-03T16:00:15Z",
       "duration": 22770,
       "url": "https://www.twitch.tv/videos/2918504504"
-    },
-    {
-      "title": "last stream.............................................. before the subathon - !socials !driscord",
-      "startedAt": "2026-11-02T16:02:22Z",
-      "duration": 9610,
-      "url": "https://www.twitch.tv/videos/2917634988"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-08T12:05:13Z",
     "2026-11-06T10:59:49Z",
     "2026-11-05T23:24:58Z",
     "2026-11-03T22:21:24Z",
@@ -73,6 +74,13 @@
   ],
   "clips": [
     {
+      "title": "fatherhood is scarry",
+      "url": "https://www.twitch.tv/duckiedoll/clip/GloriousFuriousOilKeepo-uvzqXSnRqO1kCKeP",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b5ea3c25-679b-481f-8947-25347861a691/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 24,
+      "createdAt": "2026-11-07T21:36:09Z"
+    },
+    {
       "title": "Duckie and Harmonica",
       "url": "https://www.twitch.tv/duckiedoll/clip/FantasticSmallEmuTTours-M9BeULiZLK8WAexP",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/22556639-8bdc-480e-9ed7-3e9e8f405d56/landscape/thumb/thumb-0000000000-480x272.jpg",
@@ -85,14 +93,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3370517d-4cce-4e92-82a9-c0930307e10d/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 14,
       "createdAt": "2026-11-04T17:47:58Z"
-    },
-    {
-      "title": "Smol streamer gets scared by pixels",
-      "url": "https://www.twitch.tv/duckiedoll/clip/ApatheticSilkyRadishPRChase-m4io5_L_DQxZzJWI",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3318abba-e55e-4b84-a870-5b1fef9070f7/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 13,
-      "createdAt": "2026-11-04T17:42:22Z"
     }
   ],
-  "updatedAt": "2026-11-08T08:54:33.092Z"
+  "updatedAt": "2026-11-08T15:44:49.442Z"
 }
