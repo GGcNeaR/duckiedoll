@@ -2,6 +2,12 @@
   "live": null,
   "recent": [
     {
+      "title": "U CANNOT GET'RID OF THIS GIAND DUCKIE MUAHAHAHA  -  !patreon !socials !driscord",
+      "startedAt": "2026-11-09T15:01:18Z",
+      "duration": 17400,
+      "url": "https://www.twitch.tv/videos/2924065560"
+    },
+    {
       "title": "[DAY 6] Bday DUCKIETHON (Subathon)  -  !socials !driscord",
       "startedAt": "2026-11-08T12:05:13Z",
       "duration": 32710,
@@ -18,16 +24,11 @@
       "startedAt": "2026-11-05T23:24:58Z",
       "duration": 41370,
       "url": "https://www.twitch.tv/videos/2920651036"
-    },
-    {
-      "title": "[DAY 1] DUCKIETON -  !socials !driscord",
-      "startedAt": "2026-11-03T22:21:24Z",
-      "duration": 170830,
-      "url": "https://www.twitch.tv/videos/2918806690"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-09T15:01:18Z",
     "2026-11-08T12:05:13Z",
     "2026-11-06T10:59:49Z",
     "2026-11-05T23:24:58Z",
@@ -70,26 +71,26 @@
   ],
   "clips": [
     {
+      "title": "Im traumatized",
+      "url": "https://www.twitch.tv/duckiedoll/clip/DarkDirtyLorisKappaRoss-KnSF8z8rgt9p8CpT",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0838969f-04fa-47ca-8ffb-6c66566dea37/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 29,
+      "createdAt": "2026-11-09T19:31:05Z"
+    },
+    {
       "title": "Unforgivable birthday",
       "url": "https://www.twitch.tv/duckiedoll/clip/InquisitiveSincereWeaselPeteZarollTie-3l3LHZi-cguuLlnT",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9923bd5e-c23b-400b-9ed6-692c20edbe08/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 34,
+      "viewCount": 47,
       "createdAt": "2026-11-08T18:58:14Z"
     },
     {
       "title": "fatherhood is scarry",
       "url": "https://www.twitch.tv/duckiedoll/clip/GloriousFuriousOilKeepo-uvzqXSnRqO1kCKeP",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b5ea3c25-679b-481f-8947-25347861a691/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 27,
+      "viewCount": 31,
       "createdAt": "2026-11-07T21:36:09Z"
-    },
-    {
-      "title": "Duckie and Harmonica",
-      "url": "https://www.twitch.tv/duckiedoll/clip/FantasticSmallEmuTTours-M9BeULiZLK8WAexP",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/22556639-8bdc-480e-9ed7-3e9e8f405d56/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 14,
-      "createdAt": "2026-11-05T17:45:52Z"
     }
   ],
-  "updatedAt": "2026-11-09T11:01:00.571Z"
+  "updatedAt": "2026-11-09T21:24:48.110Z"
 }
