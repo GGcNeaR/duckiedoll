@@ -49,6 +49,7 @@ export const affirmation = {
 export const about = {
   facts: [
     { label: 'name', value: 'Duckie / Paty' },
+    { label: 'age', value: '26' },
     { label: 'from', value: 'Bulgaria' },
     { label: 'house', value: 'Gryffindor' },
     { label: 'personality', value: 'INFJ' },
