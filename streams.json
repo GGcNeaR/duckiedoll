@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[18+] T . T INSTEAD OF DRINKING AND PARTYING IMMA BE DRINKING WHEN DYING OMG  -  !patreon !socials !driscord",
-    "startedAt": "2026-11-13T17:25:16Z",
-    "viewerCount": 148
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[18+] T . T INSTEAD OF DRINKING AND PARTYING IMMA BE DRINKING WHEN DYING OMG  -  !patreon !socials !driscord",
+      "startedAt": "2026-11-13T17:25:16Z",
+      "duration": 19699,
+      "url": "https://www.twitch.tv/videos/2927746427"
+    },
     {
       "title": "U CANNOT GET'RID OF THIS GIAND DUCKIE MUAHAHAHA  -  !patreon !socials !driscord",
       "startedAt": "2026-11-09T15:01:18Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-06T10:59:49Z",
       "duration": 172654,
       "url": "https://www.twitch.tv/videos/2921033691"
-    },
-    {
-      "title": "[DAY 3] Bday DUCKIETON (Subathon)  -  !socials !driscord",
-      "startedAt": "2026-11-05T23:24:58Z",
-      "duration": 41370,
-      "url": "https://www.twitch.tv/videos/2920651036"
     }
   ],
   "usualTime": "afternoons",
@@ -79,7 +75,7 @@
       "title": "Im traumatized",
       "url": "https://www.twitch.tv/duckiedoll/clip/DarkDirtyLorisKappaRoss-KnSF8z8rgt9p8CpT",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0838969f-04fa-47ca-8ffb-6c66566dea37/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 103,
+      "viewCount": 105,
       "createdAt": "2026-11-09T19:31:05Z"
     },
     {
@@ -93,9 +89,9 @@
       "title": "Heart Bicep Flex",
       "url": "https://www.twitch.tv/duckiedoll/clip/ViscousBlushingAlfalfaAsianGlow-_to76tlaRHkVfYDx",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e700de2f-e50d-4075-8a30-22abf91c82ca/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 33,
+      "viewCount": 35,
       "createdAt": "2026-11-09T18:06:30Z"
     }
   ],
-  "updatedAt": "2026-11-13T19:20:52.957Z"
+  "updatedAt": "2026-11-13T23:29:42.488Z"
 }
