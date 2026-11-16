@@ -2,6 +2,12 @@
   "live": null,
   "recent": [
     {
+      "title": "GATHERING ALL THE M*NDAY HATERS AAAAAAA  -  !patreon !socials !driscord",
+      "startedAt": "2026-11-16T16:01:14Z",
+      "duration": 13090,
+      "url": "https://www.twitch.tv/videos/2930576911"
+    },
+    {
       "title": "[18+] T . T INSTEAD OF DRINKING AND PARTYING IMMA BE DRINKING WHEN DYING OMG  -  !patreon !socials !driscord",
       "startedAt": "2026-11-13T17:25:16Z",
       "duration": 19699,
@@ -18,16 +24,11 @@
       "startedAt": "2026-11-08T12:05:13Z",
       "duration": 32710,
       "url": "https://www.twitch.tv/videos/2923061114"
-    },
-    {
-      "title": "[DAY 4] Bday DUCKIETON (Subathon)  -  !socials !driscord",
-      "startedAt": "2026-11-06T10:59:49Z",
-      "duration": 172654,
-      "url": "https://www.twitch.tv/videos/2921033691"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-16T16:01:14Z",
     "2026-11-13T17:25:16Z",
     "2026-11-09T15:01:18Z",
     "2026-11-08T12:05:13Z",
@@ -72,26 +73,26 @@
   ],
   "clips": [
     {
+      "title": "Huh?! What did you say?",
+      "url": "https://www.twitch.tv/duckiedoll/clip/UninterestedCuriousPrariedogVoteYea-x6vlpejp-HeYSnGZ",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f2bbd573-bb90-402e-a5f5-e818533bf33b/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 36,
+      "createdAt": "2026-11-16T19:17:33Z"
+    },
+    {
+      "title": "Toyota Ad",
+      "url": "https://www.twitch.tv/duckiedoll/clip/CrowdedBelovedTigerPastaThat-6inINWPoaUD2P3NY",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/64d886b3-813c-4a2e-abce-f397c1e8b2b7/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 17,
+      "createdAt": "2026-11-13T18:27:17Z"
+    },
+    {
       "title": "a heartfelt message by DRUNKIEdoll",
       "url": "https://www.twitch.tv/duckiedoll/clip/ImpartialAttractiveMallardBrainSlug-iehJZwbrm4z2Hyrs",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/a272bc7b-9539-453e-8742-7e69089a0347/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 52,
+      "viewCount": 61,
       "createdAt": "2026-11-13T17:57:13Z"
-    },
-    {
-      "title": "Im traumatized",
-      "url": "https://www.twitch.tv/duckiedoll/clip/DarkDirtyLorisKappaRoss-KnSF8z8rgt9p8CpT",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0838969f-04fa-47ca-8ffb-6c66566dea37/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 121,
-      "createdAt": "2026-11-09T19:31:05Z"
-    },
-    {
-      "title": "\"family friendly\"",
-      "url": "https://www.twitch.tv/duckiedoll/clip/CorrectAbstruseHamsterPeteZaroll-woqm0O1J8eucMslz",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b7459186-0506-4516-973c-26e6200ac396/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 15,
-      "createdAt": "2026-11-09T18:10:06Z"
     }
   ],
-  "updatedAt": "2026-11-16T13:37:30.792Z"
+  "updatedAt": "2026-11-16T23:01:34.728Z"
 }
