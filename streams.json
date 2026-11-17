@@ -2,6 +2,12 @@
   "live": null,
   "recent": [
     {
+      "title": "LAST STREAM....................... before  GTA VI - HAPPY TACO/TUTMANIK TUESDAY -  !patreon !socials !driscord",
+      "startedAt": "2026-11-17T15:02:16Z",
+      "duration": 16782,
+      "url": "https://www.twitch.tv/videos/2931429150"
+    },
+    {
       "title": "GATHERING ALL THE M*NDAY HATERS AAAAAAA  -  !patreon !socials !driscord",
       "startedAt": "2026-11-16T16:01:14Z",
       "duration": 13090,
@@ -18,16 +24,11 @@
       "startedAt": "2026-11-09T15:01:18Z",
       "duration": 17400,
       "url": "https://www.twitch.tv/videos/2924065560"
-    },
-    {
-      "title": "[DAY 6] Bday DUCKIETHON (Subathon)  -  !socials !driscord",
-      "startedAt": "2026-11-08T12:05:13Z",
-      "duration": 32710,
-      "url": "https://www.twitch.tv/videos/2923061114"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-17T15:02:16Z",
     "2026-11-16T16:01:14Z",
     "2026-11-13T17:25:16Z",
     "2026-11-09T15:01:18Z",
@@ -73,26 +74,26 @@
   ],
   "clips": [
     {
+      "title": "Hers is bigger",
+      "url": "https://www.twitch.tv/duckiedoll/clip/WildCrepuscularDoveChocolateRain-LPv6OQaDpuZ2uKlX",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/bf0c17c9-16d0-4b65-b1b7-8e78b7d73548/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 22,
+      "createdAt": "2026-11-17T16:23:59Z"
+    },
+    {
       "title": "3.5 pillows tall",
       "url": "https://www.twitch.tv/duckiedoll/clip/OriginalConsiderateDonutArsonNoSexy-PzwcieG2HDSVfVWw",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/776f25f7-6429-4464-85d5-3e6c8daea5e9/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 19,
+      "viewCount": 24,
       "createdAt": "2026-11-16T19:42:12Z"
     },
     {
       "title": "Huh?! What did you say?",
       "url": "https://www.twitch.tv/duckiedoll/clip/UninterestedCuriousPrariedogVoteYea-x6vlpejp-HeYSnGZ",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f2bbd573-bb90-402e-a5f5-e818533bf33b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 68,
+      "viewCount": 79,
       "createdAt": "2026-11-16T19:17:33Z"
-    },
-    {
-      "title": "socks??? money??",
-      "url": "https://www.twitch.tv/duckiedoll/clip/YummySlickPigeonDatSheffy-YpJzmLZE7GKxVIsz",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ad87bca5-4693-42c8-8d1b-a3755026c503/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 16,
-      "createdAt": "2026-11-16T17:43:58Z"
     }
   ],
-  "updatedAt": "2026-11-17T14:18:12.170Z"
+  "updatedAt": "2026-11-17T22:28:57.938Z"
 }
