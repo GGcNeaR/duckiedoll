@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DROPS] ITS FINALLY HERE AAAAAAAAAA-  !patreon !socials !driscord",
-    "startedAt": "2026-11-18T11:31:25Z",
-    "viewerCount": 194
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "ITS FINALLY HERE AAAAAAAAAA-  !patreon !socials !driscord",
+      "startedAt": "2026-11-18T11:31:25Z",
+      "duration": 39540,
+      "url": "https://www.twitch.tv/videos/2932249692"
+    },
     {
       "title": "LAST STREAM....................... before  GTA VI - HAPPY TACO/TUTMANIK TUESDAY -  !patreon !socials !driscord",
       "startedAt": "2026-11-17T15:02:16Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-13T17:25:16Z",
       "duration": 19699,
       "url": "https://www.twitch.tv/videos/2927746427"
-    },
-    {
-      "title": "U CANNOT GET'RID OF THIS GIAND DUCKIE MUAHAHAHA  -  !patreon !socials !driscord",
-      "startedAt": "2026-11-09T15:01:18Z",
-      "duration": 17400,
-      "url": "https://www.twitch.tv/videos/2924065560"
     }
   ],
   "usualTime": "afternoons",
@@ -79,26 +75,26 @@
   ],
   "clips": [
     {
+      "title": "fart",
+      "url": "https://www.twitch.tv/duckiedoll/clip/CourteousExuberantAlbatrossSoBayed-VD-HyhJcTd9J0R55",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/d2194ccd-9856-45fa-bc98-a3233a1fe7cc/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 15,
+      "createdAt": "2026-11-19T00:08:28Z"
+    },
+    {
+      "title": "Shower",
+      "url": "https://www.twitch.tv/duckiedoll/clip/SoftFancyBatOneHand-4A1VbXQk0a5odtUP",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/65b4bf6c-6dc2-4d45-89f1-9fb98f2600dd/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 17,
+      "createdAt": "2026-11-18T14:58:42Z"
+    },
+    {
       "title": "Hers is bigger",
       "url": "https://www.twitch.tv/duckiedoll/clip/WildCrepuscularDoveChocolateRain-LPv6OQaDpuZ2uKlX",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/bf0c17c9-16d0-4b65-b1b7-8e78b7d73548/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 40,
+      "viewCount": 43,
       "createdAt": "2026-11-17T16:23:59Z"
-    },
-    {
-      "title": "3.5 pillows tall",
-      "url": "https://www.twitch.tv/duckiedoll/clip/OriginalConsiderateDonutArsonNoSexy-PzwcieG2HDSVfVWw",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/776f25f7-6429-4464-85d5-3e6c8daea5e9/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 30,
-      "createdAt": "2026-11-16T19:42:12Z"
-    },
-    {
-      "title": "Huh?! What did you say?",
-      "url": "https://www.twitch.tv/duckiedoll/clip/UninterestedCuriousPrariedogVoteYea-x6vlpejp-HeYSnGZ",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f2bbd573-bb90-402e-a5f5-e818533bf33b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 110,
-      "createdAt": "2026-11-16T19:17:33Z"
     }
   ],
-  "updatedAt": "2026-11-18T20:47:11.139Z"
+  "updatedAt": "2026-11-19T02:03:45.447Z"
 }
