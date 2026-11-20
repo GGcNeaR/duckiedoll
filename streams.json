@@ -1,5 +1,9 @@
 {
-  "live": null,
+  "live": {
+    "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
+    "startedAt": "2026-11-20T14:24:10Z",
+    "viewerCount": 139
+  },
   "recent": [
     {
       "title": "[DROPS] DAY 2 - PARTY TIME -  !patreon !socials !driscord",
@@ -28,6 +32,7 @@
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-20T14:24:10Z",
     "2026-11-19T14:30:14Z",
     "2026-11-18T11:31:25Z",
     "2026-11-17T15:02:16Z",
@@ -76,17 +81,10 @@
   ],
   "clips": [
     {
-      "title": "DECK...",
-      "url": "https://www.twitch.tv/duckiedoll/clip/GracefulBlindingAirGuitarCoolStoryBro-DXANMPHwB5NCL-PD",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ac887803-5212-43fe-b63b-a61c2f727f5c/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 17,
-      "createdAt": "2026-11-20T00:13:10Z"
-    },
-    {
       "title": "Very clean",
       "url": "https://www.twitch.tv/duckiedoll/clip/FurryCutePidgeonPunchTrees-gMOEDS9c5QhNeKaK",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c195057f-bc6f-478a-a108-ae155a39cd2b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 22,
+      "viewCount": 27,
       "createdAt": "2026-11-19T20:45:43Z"
     },
     {
@@ -95,7 +93,14 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/65b4bf6c-6dc2-4d45-89f1-9fb98f2600dd/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 39,
       "createdAt": "2026-11-18T14:58:42Z"
+    },
+    {
+      "title": "Clothes change",
+      "url": "https://www.twitch.tv/duckiedoll/clip/GiftedLitigiousCiderPrimeMe-jeyganwFgJl8zzEm",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/69cff159-8259-4416-8391-9bcc572f6925/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 24,
+      "createdAt": "2026-11-18T14:41:06Z"
     }
   ],
-  "updatedAt": "2026-11-20T08:37:46.778Z"
+  "updatedAt": "2026-11-20T17:16:01.048Z"
 }
