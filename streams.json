@@ -1,10 +1,16 @@
 {
   "live": {
     "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
-    "startedAt": "2026-11-20T14:24:10Z",
-    "viewerCount": 139
+    "startedAt": "2026-11-20T19:53:24Z",
+    "viewerCount": 106
   },
   "recent": [
+    {
+      "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
+      "startedAt": "2026-11-20T14:24:10Z",
+      "duration": 19649,
+      "url": "https://www.twitch.tv/videos/2934944796"
+    },
     {
       "title": "[DROPS] DAY 2 - PARTY TIME -  !patreon !socials !driscord",
       "startedAt": "2026-11-19T14:30:14Z",
@@ -22,16 +28,11 @@
       "startedAt": "2026-11-17T15:02:16Z",
       "duration": 16782,
       "url": "https://www.twitch.tv/videos/2931429150"
-    },
-    {
-      "title": "GATHERING ALL THE M*NDAY HATERS AAAAAAA  -  !patreon !socials !driscord",
-      "startedAt": "2026-11-16T16:01:14Z",
-      "duration": 13090,
-      "url": "https://www.twitch.tv/videos/2930576911"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-20T19:53:24Z",
     "2026-11-20T14:24:10Z",
     "2026-11-19T14:30:14Z",
     "2026-11-18T11:31:25Z",
@@ -84,14 +85,14 @@
       "title": "Very clean",
       "url": "https://www.twitch.tv/duckiedoll/clip/FurryCutePidgeonPunchTrees-gMOEDS9c5QhNeKaK",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c195057f-bc6f-478a-a108-ae155a39cd2b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 27,
+      "viewCount": 28,
       "createdAt": "2026-11-19T20:45:43Z"
     },
     {
       "title": "Shower",
       "url": "https://www.twitch.tv/duckiedoll/clip/SoftFancyBatOneHand-4A1VbXQk0a5odtUP",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/65b4bf6c-6dc2-4d45-89f1-9fb98f2600dd/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 39,
+      "viewCount": 40,
       "createdAt": "2026-11-18T14:58:42Z"
     },
     {
@@ -102,5 +103,5 @@
       "createdAt": "2026-11-18T14:41:06Z"
     }
   ],
-  "updatedAt": "2026-11-20T17:16:01.048Z"
+  "updatedAt": "2026-11-20T23:08:44.100Z"
 }
