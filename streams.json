@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DROPS] DAY 2 - PARTY TIME -  !patreon !socials !driscord",
-    "startedAt": "2026-11-19T14:30:14Z",
-    "viewerCount": 139
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DROPS] DAY 2 - PARTY TIME -  !patreon !socials !driscord",
+      "startedAt": "2026-11-19T14:30:14Z",
+      "duration": 31046,
+      "url": "https://www.twitch.tv/videos/2933723047"
+    },
     {
       "title": "ITS FINALLY HERE AAAAAAAAAA-  !patreon !socials !driscord",
       "startedAt": "2026-11-18T11:31:25Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-16T16:01:14Z",
       "duration": 13090,
       "url": "https://www.twitch.tv/videos/2930576911"
-    },
-    {
-      "title": "[18+] T . T INSTEAD OF DRINKING AND PARTYING IMMA BE DRINKING WHEN DYING OMG  -  !patreon !socials !driscord",
-      "startedAt": "2026-11-13T17:25:16Z",
-      "duration": 19699,
-      "url": "https://www.twitch.tv/videos/2927746427"
     }
   ],
   "usualTime": "afternoons",
@@ -80,26 +76,26 @@
   ],
   "clips": [
     {
-      "title": "door 1",
-      "url": "https://www.twitch.tv/duckiedoll/clip/HeartlessViscousSrirachaPartyTime-3ex4F_iD3HD6tKmP",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f842b7e3-51ca-4d78-95f1-ec0e09b3bd38/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 15,
-      "createdAt": "2026-11-19T01:25:09Z"
-    },
-    {
-      "title": "tires 1",
-      "url": "https://www.twitch.tv/duckiedoll/clip/SpotlessWonderfulChowderNerfRedBlaster-A1TN1Z2VuxSmS3Ll",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ab9a7c59-0f15-4283-bdbe-b58ac6dba6cf/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 27,
-      "createdAt": "2026-11-19T01:01:05Z"
-    },
-    {
       "title": "Shower",
       "url": "https://www.twitch.tv/duckiedoll/clip/SoftFancyBatOneHand-4A1VbXQk0a5odtUP",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/65b4bf6c-6dc2-4d45-89f1-9fb98f2600dd/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 32,
+      "viewCount": 39,
       "createdAt": "2026-11-18T14:58:42Z"
+    },
+    {
+      "title": "Clothes change",
+      "url": "https://www.twitch.tv/duckiedoll/clip/GiftedLitigiousCiderPrimeMe-jeyganwFgJl8zzEm",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/69cff159-8259-4416-8391-9bcc572f6925/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 24,
+      "createdAt": "2026-11-18T14:41:06Z"
+    },
+    {
+      "title": "Hers is bigger",
+      "url": "https://www.twitch.tv/duckiedoll/clip/WildCrepuscularDoveChocolateRain-LPv6OQaDpuZ2uKlX",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/bf0c17c9-16d0-4b65-b1b7-8e78b7d73548/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 55,
+      "createdAt": "2026-11-17T16:23:59Z"
     }
   ],
-  "updatedAt": "2026-11-19T19:01:43.147Z"
+  "updatedAt": "2026-11-20T01:13:32.443Z"
 }
