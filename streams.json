@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
-    "startedAt": "2026-11-20T19:53:24Z",
-    "viewerCount": 106
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
+      "startedAt": "2026-11-20T19:53:24Z",
+      "duration": 12120,
+      "url": "https://www.twitch.tv/videos/2935273224"
+    },
     {
       "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
       "startedAt": "2026-11-20T14:24:10Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-18T11:31:25Z",
       "duration": 39540,
       "url": "https://www.twitch.tv/videos/2932249692"
-    },
-    {
-      "title": "LAST STREAM....................... before  GTA VI - HAPPY TACO/TUTMANIK TUESDAY -  !patreon !socials !driscord",
-      "startedAt": "2026-11-17T15:02:16Z",
-      "duration": 16782,
-      "url": "https://www.twitch.tv/videos/2931429150"
     }
   ],
   "usualTime": "afternoons",
@@ -82,10 +78,17 @@
   ],
   "clips": [
     {
+      "title": "She did what? Crazy XD",
+      "url": "https://www.twitch.tv/duckiedoll/clip/PlausibleBashfulWaffleDoubleRainbow-5_kGd3QeI0-iC_5Z",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8f0ad487-156f-4ae2-a7db-746fca8ca3b5/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 19,
+      "createdAt": "2026-11-20T17:10:12Z"
+    },
+    {
       "title": "Very clean",
       "url": "https://www.twitch.tv/duckiedoll/clip/FurryCutePidgeonPunchTrees-gMOEDS9c5QhNeKaK",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c195057f-bc6f-478a-a108-ae155a39cd2b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 28,
+      "viewCount": 31,
       "createdAt": "2026-11-19T20:45:43Z"
     },
     {
@@ -94,14 +97,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/65b4bf6c-6dc2-4d45-89f1-9fb98f2600dd/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 40,
       "createdAt": "2026-11-18T14:58:42Z"
-    },
-    {
-      "title": "Clothes change",
-      "url": "https://www.twitch.tv/duckiedoll/clip/GiftedLitigiousCiderPrimeMe-jeyganwFgJl8zzEm",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/69cff159-8259-4416-8391-9bcc572f6925/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 24,
-      "createdAt": "2026-11-18T14:41:06Z"
     }
   ],
-  "updatedAt": "2026-11-20T23:08:44.100Z"
+  "updatedAt": "2026-11-21T03:57:08.955Z"
 }
