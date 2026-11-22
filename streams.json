@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DROPS] 🚨 CHAPTER 2 🌆 - HAPPY SATURDAY🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
-    "startedAt": "2026-11-21T15:11:53Z",
-    "viewerCount": 94
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DROPS] 🚨 CHAPTER 2 🌆 - HAPPY SATURDAY🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
+      "startedAt": "2026-11-21T15:11:53Z",
+      "duration": 34602,
+      "url": "https://www.twitch.tv/videos/2936189506"
+    },
     {
       "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
       "startedAt": "2026-11-20T19:53:24Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-19T14:30:14Z",
       "duration": 31046,
       "url": "https://www.twitch.tv/videos/2933723047"
-    },
-    {
-      "title": "ITS FINALLY HERE AAAAAAAAAA-  !patreon !socials !driscord",
-      "startedAt": "2026-11-18T11:31:25Z",
-      "duration": 39540,
-      "url": "https://www.twitch.tv/videos/2932249692"
     }
   ],
   "usualTime": "afternoons",
@@ -86,23 +82,23 @@
       "title": "She did what? Crazy XD",
       "url": "https://www.twitch.tv/duckiedoll/clip/PlausibleBashfulWaffleDoubleRainbow-5_kGd3QeI0-iC_5Z",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8f0ad487-156f-4ae2-a7db-746fca8ca3b5/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 33,
+      "viewCount": 34,
       "createdAt": "2026-11-20T17:10:12Z"
     },
     {
       "title": "Very clean",
       "url": "https://www.twitch.tv/duckiedoll/clip/FurryCutePidgeonPunchTrees-gMOEDS9c5QhNeKaK",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c195057f-bc6f-478a-a108-ae155a39cd2b/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 35,
+      "viewCount": 36,
       "createdAt": "2026-11-19T20:45:43Z"
     },
     {
       "title": "jump on what??????",
       "url": "https://www.twitch.tv/duckiedoll/clip/PuzzledCoweringOrangeSoBayed-BhKf_M71lsw4Vxlg",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8c3e7bfb-e3b9-4db9-9a8e-43bd1ffbc222/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 17,
+      "viewCount": 18,
       "createdAt": "2026-11-19T20:15:51Z"
     }
   ],
-  "updatedAt": "2026-11-21T23:52:05.572Z"
+  "updatedAt": "2026-11-22T04:50:18.737Z"
 }
