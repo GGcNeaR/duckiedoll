@@ -81,6 +81,13 @@
   ],
   "clips": [
     {
+      "title": "what.....",
+      "url": "https://www.twitch.tv/duckiedoll/clip/CogentAnimatedClintmullinsTheTarFu-iF-UEJrK4_Tnl1C2",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/257db57e-660c-49f7-965c-10594223deaf/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 30,
+      "createdAt": "2026-11-24T16:25:47Z"
+    },
+    {
       "title": "Beans vs head",
       "url": "https://www.twitch.tv/duckiedoll/clip/PrettiestStormyLampBrainSlug-tVElPW85onJREQqF",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8905c531-e3ec-4751-8555-b6b3d97bd4e1/landscape/thumb/thumb-0000000000-480x272.jpg",
@@ -93,14 +100,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f81a9d6a-00b6-4122-ae77-658d37748b7a/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 25,
       "createdAt": "2026-11-20T20:37:17Z"
-    },
-    {
-      "title": "She did what? Crazy XD",
-      "url": "https://www.twitch.tv/duckiedoll/clip/PlausibleBashfulWaffleDoubleRainbow-5_kGd3QeI0-iC_5Z",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8f0ad487-156f-4ae2-a7db-746fca8ca3b5/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 49,
-      "createdAt": "2026-11-20T17:10:12Z"
     }
   ],
-  "updatedAt": "2026-11-25T00:06:06.027Z"
+  "updatedAt": "2026-11-25T08:20:53.501Z"
 }
