@@ -1,10 +1,12 @@
 {
-  "live": {
-    "title": "[DROPS] 🚨 STILL CHAPTER 3 🌆 - HAPPY NEW WEEK🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
-    "startedAt": "2026-11-24T15:30:38Z",
-    "viewerCount": 39
-  },
+  "live": null,
   "recent": [
+    {
+      "title": "[DROPS] 🚨 STILL CHAPTER 3 🌆 - HAPPY NEW WEEK🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
+      "startedAt": "2026-11-24T15:30:38Z",
+      "duration": 28890,
+      "url": "https://www.twitch.tv/videos/2939403659"
+    },
     {
       "title": "[DROPS] 🚨 CHAPTER 3 🌆 - HAPPY NEW WEEK🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
       "startedAt": "2026-11-23T14:35:10Z",
@@ -22,12 +24,6 @@
       "startedAt": "2026-11-20T19:53:24Z",
       "duration": 12120,
       "url": "https://www.twitch.tv/videos/2935273224"
-    },
-    {
-      "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
-      "startedAt": "2026-11-20T14:24:10Z",
-      "duration": 19649,
-      "url": "https://www.twitch.tv/videos/2934944796"
     }
   ],
   "usualTime": "afternoons",
@@ -88,23 +84,23 @@
       "title": "Beans vs head",
       "url": "https://www.twitch.tv/duckiedoll/clip/PrettiestStormyLampBrainSlug-tVElPW85onJREQqF",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8905c531-e3ec-4751-8555-b6b3d97bd4e1/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 30,
+      "viewCount": 31,
       "createdAt": "2026-11-21T22:47:29Z"
     },
     {
       "title": "Respectfully",
       "url": "https://www.twitch.tv/duckiedoll/clip/ColdHungryMangetoutStoneLightning-5QnTz9CVSokBh2Hp",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f81a9d6a-00b6-4122-ae77-658d37748b7a/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 23,
+      "viewCount": 25,
       "createdAt": "2026-11-20T20:37:17Z"
     },
     {
       "title": "She did what? Crazy XD",
       "url": "https://www.twitch.tv/duckiedoll/clip/PlausibleBashfulWaffleDoubleRainbow-5_kGd3QeI0-iC_5Z",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8f0ad487-156f-4ae2-a7db-746fca8ca3b5/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 45,
+      "viewCount": 49,
       "createdAt": "2026-11-20T17:10:12Z"
     }
   ],
-  "updatedAt": "2026-11-24T15:37:10.848Z"
+  "updatedAt": "2026-11-25T00:06:06.027Z"
 }
