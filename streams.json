@@ -2,6 +2,12 @@
   "live": null,
   "recent": [
     {
+      "title": "[DROPS] 🚨 STILL CHAPTER 3 🌆 - I FORGOT WHAT DAY IT IS🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
+      "startedAt": "2026-11-26T16:39:04Z",
+      "duration": 10180,
+      "url": "https://www.twitch.tv/videos/2941434575"
+    },
+    {
       "title": "[DROPS] 🚨 STILL CHAPTER 3 🌆 - HAPPY NEW WEEK🍹WE AINT RUSHING🌴  -  !patreon !wishlist !socials !driscord",
       "startedAt": "2026-11-24T15:30:38Z",
       "duration": 28890,
@@ -18,16 +24,11 @@
       "startedAt": "2026-11-21T15:11:53Z",
       "duration": 34602,
       "url": "https://www.twitch.tv/videos/2936189506"
-    },
-    {
-      "title": "[DROPS] 🚨 DAY 3 🌆 - FRIDAY NIGHT🍹 ; VICE CITY 🌴  -  !patreon !wishlist !socials !driscord",
-      "startedAt": "2026-11-20T19:53:24Z",
-      "duration": 12120,
-      "url": "https://www.twitch.tv/videos/2935273224"
     }
   ],
   "usualTime": "afternoons",
   "startTimes": [
+    "2026-11-26T16:39:04Z",
     "2026-11-24T15:30:38Z",
     "2026-11-23T14:35:10Z",
     "2026-11-21T15:11:53Z",
@@ -84,8 +85,15 @@
       "title": "what.....",
       "url": "https://www.twitch.tv/duckiedoll/clip/CogentAnimatedClintmullinsTheTarFu-iF-UEJrK4_Tnl1C2",
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/257db57e-660c-49f7-965c-10594223deaf/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 37,
+      "viewCount": 42,
       "createdAt": "2026-11-24T16:25:47Z"
+    },
+    {
+      "title": "Yes, we have heard this before...",
+      "url": "https://www.twitch.tv/duckiedoll/clip/LuckyExquisiteHerdCoolStoryBob-vgRRmqQFf3NKMpHU",
+      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/161ec9cc-4311-4e3e-835f-5d3cbf848b38/landscape/thumb/thumb-0000000000-480x272.jpg",
+      "viewCount": 19,
+      "createdAt": "2026-11-24T15:59:16Z"
     },
     {
       "title": "Beans vs head",
@@ -93,14 +101,7 @@
       "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8905c531-e3ec-4751-8555-b6b3d97bd4e1/landscape/thumb/thumb-0000000000-480x272.jpg",
       "viewCount": 32,
       "createdAt": "2026-11-21T22:47:29Z"
-    },
-    {
-      "title": "Respectfully",
-      "url": "https://www.twitch.tv/duckiedoll/clip/ColdHungryMangetoutStoneLightning-5QnTz9CVSokBh2Hp",
-      "thumbnailUrl": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/f81a9d6a-00b6-4122-ae77-658d37748b7a/landscape/thumb/thumb-0000000000-480x272.jpg",
-      "viewCount": 27,
-      "createdAt": "2026-11-20T20:37:17Z"
     }
   ],
-  "updatedAt": "2026-11-26T10:33:56.181Z"
+  "updatedAt": "2026-11-26T19:48:36.487Z"
 }
